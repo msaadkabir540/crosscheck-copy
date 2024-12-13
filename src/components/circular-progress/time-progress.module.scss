@@ -1,0 +1,8 @@
+@import "styles/_breakpoints.scss";
+@import "styles/_colors.scss";
+@import "styles/_mixin.scss";
+
+.main {
+  width: calc(50px + (120 - 50) * (100vw - 280px) / (2560 - 280));
+  height: calc(50px + (120 - 50) * (100vw - 280px) / (2560 - 280));
+}

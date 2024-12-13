@@ -1,0 +1,77 @@
+.your-selector__menu-list {
+  &::-webkit-scrollbar {
+    width: 5px !important;
+    /* Remove scrollbar space */
+    background: var(--bg-b);
+    /* Optional: just make scrollbar invisible */
+    height: 5px !important;
+    border-radius: 8px;
+  }
+
+  /* Optional: show position indicator in red */
+  &::-webkit-scrollbar-thumb {
+    background: var(--bg-f);
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar:vertical {
+    width: 5px;
+    /* Remove scrollbar space */
+    background: var(--bg-b);
+    /* Optional: just make scrollbar invisible */
+    height: 5px;
+    border-radius: 8px;
+    display: block !important;
+  }
+}
+
+.css-3bd4aq-option {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  max-width: 100% !important;
+}
+
+.css-19nwysx-option,
+.css-19nwysx-option:hover {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  max-width: 100% !important;
+}
+
+.css-1dimb5e-singleValue {
+  color: var(--stroke-b) !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  max-width: 90% !important;
+}
+
+.css-4xgw5l-IndicatorsContainer2 {
+  svg {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.css-1vdldcw-DropdownIndicator2 {
+  svg {
+    height: 16px !important;
+    width: 16px !important;
+  }
+}
+
+.css-g8wyva-ClearIndicator2 {
+  svg {
+    height: 16px !important;
+    width: 16px !important;
+  }
+}
+
+._wraper_1fsq4_6 ._selectClass_1fsq4_27 svg {
+  fill: var(--bg-f) !important;
+  stroke: var(--bg-f) !important;
+  height: 16px !important;
+  width: 16px !important;
+}

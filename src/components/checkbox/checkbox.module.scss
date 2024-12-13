@@ -1,0 +1,134 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.container {
+  position: relative;
+
+  padding-left: 35px;
+
+  cursor: pointer;
+
+  font-weight: 500;
+
+  @include font15;
+  color: var(--font-a);
+
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+  height: 0;
+
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkMark {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  height: 16px;
+
+  width: 16px;
+
+  border: 1px solid var(--stroke-d);
+
+  border-radius: 4px;
+}
+
+.checkMark1 {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  height: 16px;
+
+  width: 16px;
+
+  border: 1px solid var(--stroke-d);
+
+  border-radius: 4px;
+}
+
+/* When the checkbox is checked, add a background */
+.container input:checked ~ .checkMark {
+  background-color: var(--bg-i);
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+}
+
+.container input:disabled ~ .checkMark {
+  background-color: var(--font-e);
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+  border: 1px solid var(--bg-j);
+}
+
+.container input:checked ~ .checkMark1 {
+  background-color: var(--bg-i);
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+}
+
+.container input:disabled ~ .checkMark1 {
+  background-color: var(--font-e);
+
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+}
+
+/* Create the checkMark/indicator (hidden when not checked) */
+.checkMark:after {
+  content: '';
+
+  position: absolute;
+
+  display: none;
+}
+
+.checkMark1:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.container .checkMark:after {
+  left: 5px;
+  top: 2px;
+  width: 3px;
+  height: 7px;
+  border: solid var(--font-b);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.container input:checked ~ .checkMark:after {
+  display: block;
+}
+
+.container .checkMark1:after {
+  width: 10px;
+  height: 2px;
+  top: 50%;
+  left: 15%;
+  background-color: var(--bg-b);
+}
+.container input:checked ~ .checkMark1:after {
+  display: block;
+}

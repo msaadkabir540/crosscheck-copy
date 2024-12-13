@@ -1,0 +1,228 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.formWrapper {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  @media (max-width: 540px) {
+    margin-top: 20px;
+  }
+}
+
+.wrapper {
+  width: 70%;
+  margin-bottom: 75px;
+  justify-content: space-between;
+  padding-left: 45px;
+  gap: 65px;
+  display: flex;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 540px) {
+    flex-direction: row;
+    padding-left: 0px;
+    gap: 10px;
+    align-items: start;
+  }
+
+  .leftSection {
+    gap: 20px;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      padding-top: 5px;
+    }
+
+    @media (max-width: 540px) {
+      justify-content: center;
+      width: 40%;
+      gap: 10px;
+    }
+
+    p {
+      color: var(--stroke-b);
+      /* Input Field Title */
+
+      @include font13;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .initialContainer {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      color: var(--stroke-b);
+
+      @include font60;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      position: relative;
+      background-color: var(--table-row);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      @media (max-width: 540px) {
+        height: 100px;
+        width: 100px;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+
+        @media (max-width: 540px) {
+          height: 100px;
+          width: 100px;
+        }
+      }
+    }
+
+    .btnClass {
+      width: 200px;
+
+      @media (max-width: 540px) {
+        height: 25px;
+      }
+
+      border: 1px solid var(--stroke-b) !important;
+      background-color: var(--bg-j);
+
+      span {
+        color: var(--stroke-b) !important;
+      }
+    }
+  }
+
+  .rightSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+
+    @media (max-width: 540px) {
+      width: 60%;
+      gap: 10px;
+    }
+
+    .radioBtns {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.btnDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  justify-content: end;
+
+  .cancelBtn {
+    background-color: var(--bg-j);
+    border: 1px solid var(--stroke-b) !important;
+
+    span {
+      color: var(--stroke-b) !important;
+    }
+  }
+}
+
+.delBtn {
+  background-color: var(--bg-j);
+  border: 1px solid var(--red) !important;
+
+  @media (max-width: 540px) {
+    height: 25px;
+  }
+
+  span {
+    color: var(--red) !important;
+  }
+}
+
+.storageCard {
+  padding: 20px;
+  border: 1px solid var(--stroke-a);
+  width: 30%;
+  min-height: 325px;
+  gap: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    min-width: 100px;
+    min-height: 100px;
+    background-color: var(--bg-b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  h1 {
+    color: var(--stroke-b);
+
+    @include font32;
+    font-weight: 700;
+    line-height: 37.6px;
+    text-align: center;
+    margin: 0px;
+  }
+
+  span {
+    @include font18;
+    font-weight: 300;
+    line-height: 21.15px;
+    text-align: center;
+    color: var(--bg-i);
+  }
+
+  p {
+    //styleName: Desktop/Body/Body 3;
+
+    @include font13;
+    font-weight: 300;
+    line-height: 12.93px;
+    text-align: center;
+    color: var(--font-e);
+  }
+
+  .progress {
+    width: 100%;
+    margin-top: 30px;
+  }
+}

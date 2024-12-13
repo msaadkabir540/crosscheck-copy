@@ -1,0 +1,223 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  position: relative;
+  z-index: 3;
+
+  label {
+    font-weight: 500;
+    @include font13;
+    line-height: 27px;
+    color: var(--font-a);
+    text-transform: capitalize;
+    margin-left: 7px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 4px;
+
+    div {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--red);
+    }
+  }
+
+  .customTagInput {
+    height: 35px;
+    background-color: var(--bg-c);
+    border: 1px solid var(--stroke-a);
+    border-radius: 5.06897px;
+    padding: 10px 35px 10px 10px;
+    @include font13;
+    color: var(--font-a) !important;
+    font-weight: 500;
+    width: 100%;
+
+    &::-webkit-credentials-auto-fill-button {
+      visibility: hidden !important;
+      position: absolute !important;
+      right: 0 !important;
+    }
+
+    &:focus {
+      outline: 1px solid var(--bg-j);
+      border: 1px solid var(--stroke-b);
+    }
+
+    &:active {
+      border: 1px solid var(--stroke-b);
+    }
+
+    &::placeholder {
+      font-weight: 300;
+      @include font13;
+      color: var(--font-e);
+    }
+  }
+
+  .inputContainer {
+    position: relative;
+
+    .clearButton {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+
+      svg {
+        path {
+          fill: var(--stroke-d);
+        }
+      }
+    }
+  }
+  .optionMenu {
+    background-color: var(--bg-a);
+    border-radius: 5px;
+    border: 1px solid var(--stroke-a);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 30px;
+    right: 25px;
+    z-index: 3;
+
+    .options {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--font-a);
+      @include font13;
+      svg {
+        path {
+          fill: var(--bg-j) !important;
+        }
+      }
+
+      &:hover {
+        background-color: var(--hover);
+      }
+    }
+
+    svg {
+      height: 11px;
+      width: 11px;
+    }
+  }
+
+  .menu {
+    margin-top: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    box-sizing: border-box;
+    color: var(--font-c);
+    background-color: var(--bg-c);
+    border: 1px solid var(--stroke-a);
+    border-radius: 5px;
+    width: 100%;
+
+    .ul {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 35px;
+      padding: 10px;
+      font-weight: 600;
+      @include font13;
+      svg {
+        path {
+          fill: var(--stroke-b);
+        }
+      }
+      .tick {
+        svg {
+          path {
+            fill: var(--none);
+          }
+        }
+      }
+
+      &:hover {
+        background-color: var(--hover);
+      }
+
+      .innerLeft {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: var(--font-c);
+        @include font13;
+        svg {
+          path {
+            stroke: var(--stroke-b) !important;
+            fill: var(--bg-j) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.renameInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 35px;
+  gap: 10px;
+}
+
+.checkbox {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  background-color: var(--bg-j);
+  border: 1px solid var(--stroke-b);
+  border-radius: 4px;
+  outline: 1px solid var(--bg-j);
+  cursor: pointer;
+  position: relative;
+}
+
+.noOption {
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-weight: 600;
+  @include font13;
+  color: var(--font-e);
+  text-align: center;
+  justify-content: center;
+}
+
+.loader {
+  position: absolute;
+  bottom: 0;
+  top: 53px;
+  left: 145px;
+}
+
+.backdropDiv {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j);
+  z-index: 2;
+}
+
+.errorMessage {
+  position: absolute;
+  display: block;
+  @include font13;
+  margin-left: 5px;
+  color: var(--light-red);
+}

@@ -1,0 +1,24 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  // height: 260px
+  border: solid 1px var(--stroke-a);
+  border-radius: 5px;
+  padding: 10px;
+  .title {
+    margin-bottom: 20px;
+    @include font18;
+    text-align: center;
+    font-weight: 600;
+  }
+  .previewIcon {
+    width: 100% !important;
+    height: max-content !important;
+    svg {
+      width: 370px !important;
+      height: 200px !important;
+    }
+  }
+}

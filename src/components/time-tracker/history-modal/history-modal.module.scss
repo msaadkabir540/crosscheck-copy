@@ -1,0 +1,162 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainDiv {
+  max-width: 648px !important;
+  min-height: 814px;
+  padding: 20px !important;
+
+  .crossImg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+      cursor: pointer;
+    }
+
+    .modalTitle {
+      @include font24;
+      font-weight: 700;
+      @include font18;
+      color: var(--stroke-b);
+    }
+
+    svg {
+      height: 18px;
+      width: 18px;
+      stroke: var(--font-a);
+      stroke-width: 1px;
+    }
+  }
+
+  .mainHistory {
+    min-height: 814px !important;
+    overflow: auto;
+
+    .profileDiv {
+      width: 100%;
+      height: 52px;
+      padding: 10px, 0px, 10px, 0px;
+      border-bottom: 1px solid var(--stroke-a);
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          border-radius: 50%;
+        }
+
+        span {
+          @include font15;
+          color: var(--stroke-b);
+          font-weight: 600;
+          line-height: 18px;
+          letter-spacing: 0px;
+          text-align: left;
+        }
+      }
+
+      .right {
+        @include font15;
+        color: var(--stroke-b);
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0px;
+        text-align: right;
+      }
+    }
+
+    .table {
+      .tableHeader {
+        height: 35px;
+        padding: 10px;
+        border: 0px 0px 1px 0px var(--stroke-a);
+        gap: 10px;
+        display: flex;
+        align-items: center;
+
+        .headerLabel {
+          //styleName: Desktop/Headings/H4;
+
+          @include font13;
+          width: 60px;
+          color: var(--stroke-b);
+          font-weight: 600;
+          line-height: 15px;
+          letter-spacing: 0em;
+          text-align: left;
+
+          &:nth-child(2) {
+            width: 219px;
+            height: 15px;
+            text-align: left;
+          }
+
+          &:nth-child(3) {
+            width: 219px;
+            height: 15px;
+            text-align: left;
+          }
+        }
+      }
+
+      .tableRow {
+        height: 35px;
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+
+        @include font13;
+        color: var(--stroke-b);
+        font-weight: 300;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+
+        .rowText {
+          width: 60px;
+        }
+
+        .rowTimePicker {
+          width: 219px;
+          height: 35px;
+          display: flex;
+          align-items: center;
+        }
+
+        .actions {
+          display: flex;
+          align-items: center;
+          width: 60px;
+          gap: 10px;
+
+          svg {
+            height: 16px;
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+.noNameIcon {
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-b);
+  color: var(--font-b);
+}

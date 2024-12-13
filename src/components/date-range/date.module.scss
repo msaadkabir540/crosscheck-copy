@@ -1,0 +1,186 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .label {
+    font-weight: 500;
+    @include font13;
+    color: var(--font-a);
+    line-height: 27px;
+    text-transform: capitalize;
+    margin-left: 7px;
+  }
+  .positionRelative {
+    position: relative;
+  }
+
+  .borderClass {
+    background: var(--bg-c);
+    box-shadow: var(--bg-j);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    height: 35px;
+    cursor: pointer;
+    border: 1px solid var(--red);
+    width: 100%;
+    @include font13;
+    color: var(--font-a);
+  }
+
+  .selectedBorder {
+    background: var(--bg-a);
+    box-shadow: var(--bg-j);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    height: 35px;
+    cursor: pointer;
+    border: 1px solid var(--stroke-b);
+    width: 100%;
+    @include font13;
+    color: var(--font-a);
+  }
+
+  .inpDiv {
+    background: var(--bg-j);
+    box-shadow: var(--bg-j);
+    border: 1px solid var(--bg-j);
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+    @include font13;
+    color: var(--font-a);
+
+    &:focus {
+      outline: 1px solid var(--bg-j);
+      border: 1px solid var(--bg-j);
+    }
+
+    &::placeholder {
+      font-weight: 400;
+      @include font13;
+      color: var(--font-e);
+    }
+
+    &:active {
+      border: 1px solid var(--bg-j);
+    }
+  }
+}
+
+.labelDate {
+  position: absolute;
+  right: 10px;
+  top: 20%;
+  pointer-events: none;
+  cursor: pointer;
+
+  .icon {
+    height: 16px;
+    width: 16px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      path {
+        stroke: var(--stroke-e);
+      }
+    }
+  }
+}
+
+.errorMessage {
+  position: absolute;
+  display: block;
+  margin-left: 5px;
+  color: var(--red);
+  @include font13;
+}
+
+.iconsDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+
+  button {
+    border: 0px solid var(--bg-j);
+    background-color: var(--bg-j);
+    outline: 1px solid var(--bg-j);
+    margin-left: 8px;
+
+    img {
+      height: calc(15px + (30 - 15) * (100vw - 280px) / (2560 - 280));
+      width: calc(15px + (30 - 15) * (100vw - 280px) / (2560 - 280));
+      cursor: pointer;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    color: var(--font-a);
+    @include font18;
+  }
+}
+
+.borderClass1 {
+  background: var(--bg-a);
+  box-shadow: var(--bg-j);
+  border: 1px solid var(--stroke-a);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+}
+
+.inputField {
+  border: 1px solid var(--stroke-a);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switchDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.allday {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  @include font15;
+  color: var(--font-a);
+}
+
+.dayClass {
+  border-radius: 0px !important;
+}
+
+.marginLeftZero {
+  margin-left: 0px;
+}
+
+.marginRightZero {
+  margin-right: 0px;
+}

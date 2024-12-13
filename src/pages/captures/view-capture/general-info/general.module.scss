@@ -1,0 +1,105 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.generalDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  h6 {
+    color: var(--font-a);
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+
+    @include font15;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .generalInfo {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .infoFlex {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .innerP {
+      width: 160px;
+      color: var(--font-e);
+
+      @include font13;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+  }
+}
+
+.textSm {
+  @include font13;
+  color: var(--font-a);
+  font-weight: 300;
+  line-height: 15px;
+  letter-spacing: 0em;
+  max-width: 1020px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: right;
+  margin-left: 10px;
+}
+
+.userInfo_container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  p {
+    @include font18;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    color: var(--font-a);
+  }
+
+  img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  @include font13;
+}
+
+.url_tag {
+  cursor: pointer !important;
+}
+
+.alternative_name {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-d);
+  color: var(--stroke-a);
+}
+.justify_start {
+  justify-content: start !important;
+}
+.adujstable_width {
+  width: calc(100% - 0px) !important;
+}

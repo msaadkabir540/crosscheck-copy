@@ -1,0 +1,59 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  width: 100%;
+
+  .label {
+    font-weight: 500;
+    @include font13;
+    color: var(--font-a);
+    line-height: 27px;
+    text-transform: capitalize;
+    margin-left: 7px;
+  }
+}
+
+.colorPickerWrapper {
+  background-color: var(--bg-a);
+  border: 1px solid var(--stroke-a);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .colorPickedBox {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+
+  .colorPickedText {
+    @include font13;
+    font-weight: 400;
+  }
+}
+
+.popover {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  z-index: 2;
+
+  .cover {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-j);
+    z-index: 2;
+  }
+}
+
+.errorMessage {
+  display: block;
+  @include font13;
+  color: var(--red) !important;
+  font-weight: 300 !important;
+  margin-top: 5px !important;
+}

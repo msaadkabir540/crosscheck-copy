@@ -1,0 +1,146 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  margin-top: 20px;
+
+  .flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--stroke-a);
+    padding-bottom: 5px;
+
+    svg {
+      height: 16px;
+      width: 16px;
+      path {
+        stroke: var(--stroke-b);
+      }
+    }
+
+    p {
+      @include font24;
+      font-weight: 700;
+      line-height: 26px;
+      color: var(--font-c);
+    }
+  }
+
+  .innerFlex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      display: none;
+    }
+
+    .moreInner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      @media (max-width: 600px) {
+        flex-wrap: unset;
+        overflow-x: auto;
+      }
+
+      .project {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+
+        span {
+          border-radius: 5px;
+          padding: 3px 5px;
+          border: 1px solid var(--stroke-b);
+          text-transform: uppercase;
+          color: var(--font-c);
+          @include font15;
+        }
+
+        p {
+          color: var(--font-a);
+          @include font18;
+
+          font-weight: 300;
+          width: max-content;
+        }
+
+        .img {
+          position: relative;
+
+          &:hover {
+            & > div {
+              display: block;
+            }
+          }
+        }
+
+        img {
+          cursor: pointer;
+        }
+
+        .tooltip {
+          display: none;
+          border-radius: 6px;
+          background: var(--bg-c);
+          padding: 10px;
+          box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+          position: absolute;
+          top: 25px;
+          right: -10px;
+          @include font11;
+          z-index: 200;
+
+          & > div {
+            color: var(--font-a);
+          }
+
+          svg {
+            height: 16px;
+            width: 16px;
+            path {
+              stroke: var(--stroke-d);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.backdropDiv {
+  position: fixed;
+
+  inset: 0;
+  z-index: 100;
+}
+
+.nothingText {
+  @include font18;
+  font-weight: 300;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--font-e);
+}
+
+.threeDots {
+  svg {
+    height: 16px;
+    width: 16px;
+    path {
+      fill: var(--stroke-e);
+    }
+  }
+}

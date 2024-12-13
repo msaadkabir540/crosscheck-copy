@@ -1,0 +1,44 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  span {
+    @include font13;
+    color: var(--bg-i);
+    font-weight: 300;
+    line-height: 15.28px;
+    text-align: left;
+  }
+}
+
+.storageBar {
+  height: 10px;
+  width: 100%;
+  background-color: var(--avatar);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.usage {
+  background-color: var(--bg-d);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  left: 0;
+}
+
+.unused {
+  background-color: var(--avatar);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

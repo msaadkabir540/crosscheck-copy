@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "cloud.crosscheck.app_dev.www.twa",
+      "sha256_cert_fingerprints": [
+        "FD:DD:96:51:1A:4A:DE:49:56:CF:51:BE:31:24:BF:FD:E6:B0:0D:DF:42:BA:6A:1A:92:0E:EA:46:D5:77:45:81"
+      ]
+    }
+  }
+]

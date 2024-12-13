@@ -1,0 +1,41 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.comments::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+}
+
+.comments::-webkit-scrollbar:vertical {
+  width: 7px;
+  background: var(--bg-j);
+  height: 7px;
+  border-radius: 8px;
+  display: initial !important;
+}
+
+.mainComments {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 50px;
+  justify-content: space-between;
+  max-height: calc(100vh - 520px);
+  // min-height: 300px;
+
+  .comments {
+    overflow-y: scroll;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px;
+  }
+
+  .inputField {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: var(--bg-c);
+  }
+}

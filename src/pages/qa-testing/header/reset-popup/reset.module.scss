@@ -1,0 +1,130 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.statusBar {
+  min-width: 285px;
+  width: max-content;
+  @media (max-width: 490px) {
+    width: 100% !important;
+  }
+  @media (max-width: $sm) {
+    max-width: 100%;
+    margin-right: 0px;
+  }
+}
+.resetPopUp {
+  margin-top: 20px;
+
+  .field {
+    img {
+      top: 14px;
+    }
+  }
+  .p {
+    font-weight: 700;
+    @include font15;
+    color: var(--font-a);
+    margin-top: 30px;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+  }
+}
+.upperDiv {
+  height: 180px;
+  overflow: auto;
+  @include gridTwo(20, 20);
+  .rowDiv {
+    padding: 0px 20px;
+    width: 100%;
+  }
+}
+.mainBtnDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.btnClassModal {
+  height: 40px !important;
+  width: 200px;
+  background-color: var(--green);
+}
+.btnClassUncheckModal {
+  height: 40px !important;
+  width: 180px;
+  background-color: var(--bg-a);
+  margin-top: 10px;
+  span {
+    color: var(--green) !important;
+  }
+}
+
+.upperDiv::-webkit-scrollbar {
+  width: 7.5px !important; /* Remove scrollbar space */
+  background: var(--bg-b) !important; /* Optional: just make scrollbar invisible */
+  border-radius: 10px;
+}
+/* Optional: show position indicator in red */
+.upperDiv::-webkit-scrollbar-thumb {
+  background: var(--bg-f) !important;
+  border-radius: 10px;
+}
+
+.checkbox {
+  border: 1px solid var(--green) !important;
+  &:after {
+    border-color: var(--green) !important;
+  }
+}
+.zDynamicState {
+  z-index: 100 !important;
+}
+.zDynamicState2 {
+  z-index: 20 !important;
+}
+.zDynamicState3 {
+  z-index: 300 !important;
+}
+.grid {
+  @include gridSix(15, 15);
+  position: relative;
+  .field {
+    input {
+      background-color: var(--bg-j) !important;
+    }
+    img {
+      height: 14px;
+      width: 14px;
+      top: 19px;
+    }
+  }
+
+  .datePicker {
+    .date {
+      margin-top: 7px !important;
+      background-color: var(--bg-j) !important;
+    }
+  }
+
+  .resetDiv {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+    img {
+      cursor: pointer;
+    }
+    .reset {
+      font-weight: 600;
+      @include font15;
+      color: var(--green);
+      margin-left: 10px;
+    }
+  }
+}
+
+.zDynamicState4 {
+  z-index: 7 !important;
+}

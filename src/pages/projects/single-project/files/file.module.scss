@@ -1,0 +1,268 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  .titleDiv {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+      padding-left: 35px;
+    }
+
+    h5 {
+      color: var(--font-c);
+      @include font24;
+      font-weight: 700;
+    }
+  }
+
+  .startIcon {
+    left: 13px;
+  }
+}
+
+.imgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px 0px;
+  padding-bottom: 50px;
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    /* Remove scrollbar space */
+    background: var(--bg-b);
+    /* Optional: just make scrollbar invisible */
+    height: 7px;
+    border-radius: 8px;
+  }
+
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-f);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar:vertical {
+    width: 7px;
+    /* Remove scrollbar space */
+    background: var(--bg-b);
+    /* Optional: just make scrollbar invisible */
+    height: 7px;
+    border-radius: 8px;
+    display: none;
+  }
+  .tableWidth {
+    max-width: 2556px;
+    overflow-y: auto;
+
+    ::-webkit-scrollbar {
+      width: 7px;
+      /* Remove scrollbar space */
+      background: var(--bg-b);
+      /* Optional: just make scrollbar invisible */
+      height: 7px;
+      border-radius: 8px;
+    }
+
+    /* Optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+      background: var(--bg-f);
+      border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar:vertical {
+      width: 7px;
+      /* Remove scrollbar space */
+      background: var(--bg-b);
+      /* Optional: just make scrollbar invisible */
+      height: 7px;
+      border-radius: 8px;
+      display: block !important;
+    }
+  }
+}
+
+.th {
+  text-align: center !important;
+  font-weight: 600;
+  @include font13;
+  letter-spacing: 0.17px;
+  height: 35px;
+  color: var(--font-c);
+  background-color: var(--bg-a);
+
+  &:first-child {
+    text-align: left !important;
+    padding-left: 8px;
+
+    span {
+      text-align: left !important;
+      justify-content: flex-start !important;
+    }
+  }
+}
+
+.thead {
+  top: 0px;
+  position: sticky;
+  background-color: var(--bg-a) !important;
+  z-index: 4;
+}
+
+.tableRow {
+  box-shadow: var(--bg-j);
+  border-radius: 7px;
+  .iconStroke {
+    path {
+      stroke: var(--stroke-d);
+    }
+  }
+  .iconStroke1 {
+    path {
+      fill: var(--stroke-d);
+    }
+  }
+  &:hover {
+    .iconStroke {
+      path {
+        stroke: var(--sidebar);
+      }
+    }
+    .iconStroke1 {
+      path {
+        fill: var(--sidebar);
+      }
+    }
+  }
+
+  td {
+    font-weight: 400;
+    @include font13;
+    color: var(--font-a);
+    height: 36px;
+
+    &:first-child {
+      padding-left: 18px !important;
+      border-radius: 5px 0px 0px 5px;
+    }
+
+    &:last-child {
+      border-radius: 0px 5px 5px 0px;
+    }
+  }
+}
+
+.checkboxContainer {
+  display: inline !important;
+  top: -2px !important;
+  left: 5px !important;
+}
+
+.checkboxContainer1 {
+  display: inline !important;
+  top: -2px !important;
+  left: 5px;
+}
+
+.checkDiv {
+  background-color: var(--bg-b);
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgDiv1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+
+  .img {
+    position: relative;
+
+    &:hover {
+      & div {
+        opacity: 1;
+        transition-delay: 0.3s;
+      }
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+.tooltip {
+  transition: 0s;
+  opacity: 0;
+  position: absolute;
+  background: var(--bg-a);
+  border: 1px solid var(--stroke-a);
+  box-shadow: 0px 0px 10px var(--bg-shadow);
+  border-radius: 2px 2px 2px 0px;
+  padding: 3px 9px;
+  width: max-content;
+  top: 20px;
+  right: 0px;
+  z-index: 200;
+
+  p {
+    font-weight: 400;
+    @include font13;
+    color: var(--font-a);
+    text-transform: capitalize;
+  }
+}
+
+.modal {
+  background: var(--bg-modal) !important;
+}
+
+.imgDel {
+  height: 15px;
+  width: 15px;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.high {
+  text-transform: uppercase;
+}
+
+.leftImgDiv {
+  justify-content: flex-start;
+}
+
+.userNamePointer {
+  cursor: pointer;
+}
+
+.linkLocation {
+  text-decoration: none;
+  color: var(--inherit);
+  cursor: pointer;
+}
+
+.clickable {
+  &:hover {
+    border-bottom: 1px solid var(--stroke-b);
+  }
+}

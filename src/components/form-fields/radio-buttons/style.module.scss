@@ -1,0 +1,54 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.label {
+  color: var(--font-a) !important;
+  @include font13;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.radioButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  .singleButton {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--font-a);
+    @include font13;
+    cursor: pointer;
+
+    input[type='radio'] {
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid var(--stroke-b);
+      border-radius: 50%;
+      outline: 1px solid var(--bg-j);
+      position: relative;
+      transition: border-color 0.3s;
+
+      &:checked::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background-color: var(--bg-g);
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.errorMessage {
+  color: var(--red);
+  @include font13;
+}

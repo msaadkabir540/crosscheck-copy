@@ -1,0 +1,139 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  .mappingFieldsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+
+    .mappingField {
+      display: flex;
+      gap: 20px;
+      height: 35px;
+      width: 100%;
+      align-items: center;
+
+      .textFieldControl {
+        width: 408px;
+
+        input {
+          @include font13;
+          font-style: normal !important;
+          font-weight: 300 !important;
+          line-height: normal !important;
+        }
+      }
+
+      .selectFieldControl {
+        .dynamicWrapper {
+          width: 408px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .arrowIcon {
+        z-index: 4;
+      }
+
+      .mappingOutput {
+        width: 100%;
+        z-index: 4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          @include font13;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+
+          span {
+            @include font13;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            color: var(--font-d);
+            cursor: pointer;
+          }
+        }
+
+        span {
+          color: var(--red);
+
+          @include font13;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  p {
+    @include font13;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    color: var(--font-a);
+
+    a {
+      color: var(--light-red);
+    }
+  }
+
+  span {
+    // margin-top: 10px;
+
+    @include font15;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .headings {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .hollowSpace {
+      min-width: 15px;
+      min-height: 24px;
+    }
+
+    .headingControl {
+      width: 408px;
+
+      span {
+        color: var(--font-a);
+
+        @include font13;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+    .importBtn {
+      align-self: flex-end;
+
+      button {
+        span {
+          margin-top: 0px !important;
+        }
+      }
+    }
+  }
+}
+
+.warnText {
+  @include font13;
+  color: var(--light-red);
+}

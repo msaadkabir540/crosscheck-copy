@@ -1,0 +1,416 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.wrapper {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+  .sideBar {
+    display: flex;
+    gap: 10px;
+    width: 207px;
+    border-right: 1px solid var(--border);
+    height: calc(100vh - 160px);
+
+    .sideBarHeadClass {
+      padding: 10px 10px;
+      color: var(--font-e);
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .sideBarTabs {
+      padding: 10px 10px;
+      color: var(--font-a);
+      font-weight: 600;
+      width: 180px;
+      cursor: pointer;
+    }
+  }
+
+  .projectInfo {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    flex-direction: column;
+  }
+
+  .headings {
+    min-width: 150px;
+    border-radius: 10px;
+    border: 1px solid var(--stroke-a);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    align-self: stretch;
+
+    padding: 5px 15px;
+
+    .blockHead {
+      min-width: 150px;
+      padding: 10px 0px;
+      color: var(--font-a);
+      font-feature-settings:
+        'clig' off,
+        'liga' off;
+
+      @include font15;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      @media (max-width: 760px) {
+        padding: 4px;
+      }
+    }
+    .dataDetails {
+      // margin: 10px 0;
+      display: flex;
+      // align-items: flex-start;
+      // gap: 10px;
+      width: 100%;
+      justify-content: space-between;
+
+      @media (max-width: 760px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 2px;
+        gap: 0;
+      }
+
+      .headingsDiv {
+        min-width: 150px;
+        padding: 10px 0px;
+        color: var(--font-e);
+        font-feature-settings:
+          'clig' off,
+          'liga' off;
+
+        @include font13;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        @media (max-width: 760px) {
+          padding: 4px;
+        }
+      }
+
+      .content {
+        position: relative;
+
+        .count {
+          margin-top: -50px;
+          margin-right: 55px;
+          right: 6px;
+          position: absolute;
+          font-weight: 600;
+          @include font9;
+          color: var(--font-a);
+          cursor: pointer;
+        }
+
+        .editMode {
+          position: relative;
+          width: 300px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin: 6px 0px;
+
+          .dynamicWrapper {
+            min-width: 245px !important;
+            max-width: 245px !important;
+
+            label {
+              display: none;
+            }
+          }
+
+          .inputClass {
+            width: 245px;
+          }
+
+          .saveBtn {
+            padding-bottom: 5px;
+            height: 100%;
+            position: absolute;
+            margin-top: 5px;
+            right: 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            .cross {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              svg {
+                margin-bottom: -4px !important;
+                height: 16px;
+                width: 16px;
+              }
+            }
+            .tick {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              svg {
+                height: 16px;
+                width: 16px;
+              }
+            }
+          }
+        }
+        .greyIcon {
+          path {
+            stroke: var(--stroke-d);
+          }
+        }
+        .greyIcon1 {
+          path {
+            fill: var(--stroke-d);
+          }
+        }
+
+        .contentDiv {
+          max-width: max-content;
+          padding: 10px 0px;
+          color: var(--font-a);
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          cursor: pointer;
+
+          @include font13;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+
+          @media (max-width: 760px) {
+            width: 100%;
+            padding: 4px;
+          }
+          img {
+            cursor: pointer;
+            margin-right: -10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 64px;
+          }
+          svg {
+            @media (max-width: 760px) {
+              top: -15px !important;
+              right: 10px !important;
+              position: absolute;
+              height: 12px;
+              width: 12px;
+            }
+          }
+
+          .config {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .btnConfig {
+              margin-left: 10px;
+              text-decoration: underline;
+              color: var(--font-c);
+              cursor: pointer;
+              @include font13;
+            }
+          }
+        }
+
+        .imgContentDiv {
+          padding: 0;
+        }
+      }
+      .contentLast {
+        width: 100%;
+
+        @media (max-width: 490px) {
+          display: none;
+        }
+      }
+    }
+
+    .lastDataDetails {
+      align-items: flex-start !important;
+    }
+  }
+}
+.selectDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .btnClass {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .buttonClass {
+    width: 118px;
+  }
+  .noLabel {
+    label {
+      display: none;
+    }
+  }
+}
+.rowContainer {
+  margin-top: 10px;
+  height: 325px;
+  overflow-y: scroll;
+  .membersRow {
+    display: flex;
+    padding: 10px 0px;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 490px) {
+      gap: 15px;
+    }
+
+    align-self: stretch;
+    border-bottom: 1px solid var(--stroke-a);
+
+    .btnRemove {
+      background-color: var(--bg-f);
+      display: flex;
+      padding: 1px 3px;
+      justify-content: center;
+      align-items: center;
+      height: 20px;
+    }
+
+    .imgDiv {
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+
+      img {
+        margin-right: -10px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+
+      .initialSpan {
+        margin-right: -10px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--stroke-b);
+        color: var(--font-b);
+        border-radius: 50%;
+        @include font11;
+        font-weight: 400;
+        border: 1px solid var(--stroke-a);
+      }
+    }
+
+    img {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+    }
+
+    p {
+      /* Subtitle 1 */
+      color: var(--font-a);
+
+      @include font15;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    .name {
+      color: var(--font-a);
+      /* Mobile/H4 */
+
+      @include font11;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+  :last-child {
+    border-bottom: none;
+  }
+}
+.contentLastMobile {
+  display: none;
+  @media (max-width: 490px) {
+    display: block;
+  }
+}
+.viewAll {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+  text-align: end;
+
+  p {
+    /* Subtitle 1 */
+    color: var(--font-a);
+
+    @include font15;
+
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.sideBarInner {
+  padding: 0px 10px;
+}
+
+.configDiv {
+  flex-direction: row !important;
+}
+
+.extendInitialSpan {
+  height: 35px;
+  width: 35px;
+}
+
+.profileClass {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pointerClass {
+  cursor: pointer;
+}
+
+.editIconClass {
+  display: flex;
+  gap: 10px;
+}
+
+.relativeClass {
+  position: relative;
+}

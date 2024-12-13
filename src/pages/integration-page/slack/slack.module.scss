@@ -1,0 +1,211 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.mainDiv {
+  border: 1px solid var(--stroke-a);
+  height: calc(100vh - 150px);
+  width: 100%;
+  border-radius: 10px;
+  .btnClassStroke {
+    background-color: var(--bg-j) !important;
+    border: 1px solid var(--stroke-b);
+    span {
+      color: var(--font-c) !important;
+    }
+  }
+  .upperSection {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--stroke-a);
+
+    .leftSection {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .leftSvg {
+        padding: 15px;
+      }
+
+      .leftText {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h4 {
+          @include font24;
+          color: var(--font-a);
+        }
+        p {
+          @include font15;
+          color: var(--font-a);
+        }
+      }
+    }
+  }
+
+  .lowerSection {
+    padding: 20px;
+    .mySlack {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      .rowLeft {
+        position: relative;
+        .multiClass {
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+        .integrationName {
+          @include font18;
+          color: var(--font-a);
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .workspaceMenuClass {
+          min-width: 200px;
+          gap: 20px;
+          left: 0px;
+        }
+      }
+      .rowRight {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        position: relative;
+      }
+    }
+
+    .outerDiv {
+      border: 1px solid var(--stroke-a);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .upperDiv {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        .arrowDiv {
+          height: 24px;
+        }
+      }
+      .lowerDiv {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--stroke-a);
+  font-weight: 600;
+  @include font15;
+  color: var(--font-a);
+}
+.tableRow {
+  height: 38px;
+  border-bottom: 1px solid var(--stroke-a);
+  td {
+    padding: 10px !important;
+    @include font15;
+    color: var(--font-g);
+    text-align: left;
+  }
+
+  .iconCell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+
+    .menuClass {
+      width: 135px;
+      gap: 10px;
+      padding: 5px;
+      div {
+        padding: 5px;
+        &:last-child {
+          p {
+            color: var(--red) !important;
+          }
+        }
+      }
+    }
+  }
+}
+.table tr:hover {
+  background-color: var(--hover);
+  .icon {
+    opacity: 1;
+    width: 24px; /* Adjust icon size as needed */
+    height: 24px;
+  }
+  td {
+    color: var(--font-e);
+  }
+}
+
+tbody {
+  .editRow {
+    &:hover {
+      background-color: var(--bg-j) !important;
+    }
+    position: relative;
+    height: 200px;
+    .tableEditRow {
+      width: 100%;
+      position: absolute;
+      top: 5px;
+      left: 0;
+    }
+  }
+}
+
+.icon {
+  opacity: 0;
+  cursor: pointer;
+  width: 24px; /* Adjust icon size as needed */
+  height: 24px;
+}
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j);
+  z-index: 2;
+}
+
+.noDataIcon {
+  margin: auto;
+  width: 100%;
+  height: calc(100vh - 272px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

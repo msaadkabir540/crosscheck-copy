@@ -1,0 +1,30 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.grid {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+}
+.searchDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  input {
+    padding-left: 35px;
+  }
+}
+.btn {
+  max-width: 97px !important;
+  padding: 0px;
+  height: 35px;
+  span {
+    @include font13;
+  }
+}
+.startIcon {
+  left: 13px;
+}

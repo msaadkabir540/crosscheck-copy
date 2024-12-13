@@ -1,0 +1,173 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainDiv {
+  max-height: max-content !important;
+  padding: 20px !important;
+  max-width: 550px !important;
+
+  .crossImg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+
+    // border-bottom: solid 1px var(--stroke-a);
+    .hover {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 10px;
+      flex-direction: row;
+    }
+
+    img {
+      cursor: pointer;
+    }
+
+    .modalTitle {
+      font-weight: 700;
+      @include font24;
+      color: var(--stroke-b);
+    }
+  }
+
+  .modalBody {
+    height: 80vh;
+    padding: 20px 0 0 0;
+  }
+
+  .btnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 15px;
+
+    label {
+      padding-left: 24px !important;
+    }
+
+    .btn {
+      border: 1px solid var(--stroke-b);
+      background-color: var(--bg-j);
+
+      span {
+        color: var(--stroke-b);
+      }
+    }
+  }
+}
+
+.dataDetails {
+  margin: 10px 0;
+  // display: flex;
+  // align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2px;
+    gap: 0;
+  }
+
+  .headingsDiv {
+    min-width: 150px;
+    padding: 10px 0px;
+    color: var(--font-a);
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+
+    @include font15;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @media (max-width: 760px) {
+      @include font11;
+
+      padding: 4px;
+    }
+  }
+
+  .content {
+    width: 100%;
+    position: relative;
+
+    .contentDiv {
+      max-width: max-content;
+      padding: 10px 0px;
+      color: var(--font-a);
+      /* Subtitle 1 */
+
+      @include font15;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+
+      img {
+        cursor: pointer;
+      }
+
+      @media (max-width: 760px) {
+        width: 100%;
+        padding: 4px;
+        @include font11;
+
+        svg {
+          top: -15px !important;
+          right: 10px !important;
+          position: absolute;
+          height: 12px;
+          width: 12px;
+        }
+      }
+
+      .config {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .btnConfig {
+          margin-left: 10px;
+          text-decoration: underline;
+          color: var(--bg-d);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .contentLast {
+      width: 100%;
+
+      @media (max-width: 490px) {
+        display: none;
+      }
+
+      .rowContainer {
+        margin-top: 10px;
+        max-height: 500px;
+        overflow-y: scroll;
+      }
+    }
+
+    .selectDiv {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .buttonClass {
+        width: 118px;
+      }
+    }
+  }
+}
+
+.lastDataDetails {
+  max-height: 400px !important;
+  overflow-y: auto;
+}

@@ -1,0 +1,91 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.minimizedContainer {
+  width: 20px;
+  overflow: hidden;
+  transition: width 0.2s ease;
+  height: 44px;
+  padding: 8px;
+  border-radius: 5px 0px 0px 5px;
+  gap: 8px;
+  background: var(--table-row);
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+  display: flex;
+  align-items: center;
+}
+
+.expandedContainer {
+  width: 200px;
+  transition: width 0.1s ease;
+  height: 44px;
+  padding: 10px;
+  border-radius: 5px 0px 0px 5px;
+  gap: 8px;
+  background: var(--table-row);
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+  display: flex;
+  align-items: center;
+}
+
+.minimize {
+  cursor: pointer;
+  height: 18px;
+  width: 3px;
+  border-radius: 5px;
+  background-color: var(--stroke-a);
+  transition:
+    background-color 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.minimize.blinking {
+  cursor: pointer;
+  height: 18px;
+  width: 3px;
+  border-radius: 5px;
+  background-color: var(--red);
+  animation: blink 5s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    background-color: var(--red);
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    background-color: var(--table-row); // Set to the desired color when "off"
+    opacity: 0.7; // Set to the desired opacity when "off"
+  }
+}
+
+.time {
+  border-right: 1px solid var(--stroke-a);
+  padding: 5px 8px 4px 0px;
+  color: var(--stroke-b);
+
+  @include font11;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  min-width: 50px;
+}
+
+.runId {
+  cursor: pointer;
+
+  @include font13;
+  font-weight: 600;
+  color: var(--stroke-b);
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+  transition: opacity 0.1 ease;
+}

@@ -1,0 +1,46 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.btn {
+  display: flex;
+  position: 'relative';
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  height: 35px;
+  width: 100%;
+  background-color: var(--bg-g);
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0px solid var(--bg-j);
+  box-shadow: var(--bg-j);
+  padding: 10px;
+
+  &:disabled {
+    background-color: var(--bg-i);
+  }
+
+  .img {
+    margin-right: 10px;
+    width: 12px;
+    height: 13px;
+  }
+
+  svg {
+    margin-right: 10px;
+    width: 12px;
+    height: 13px;
+  }
+
+  .btnTitle {
+    color: var(--font-b);
+    font-weight: 600;
+    @include font13;
+    line-height: 22px;
+
+    @media (max-width: 490px) {
+      @include font11;
+    }
+  }
+}

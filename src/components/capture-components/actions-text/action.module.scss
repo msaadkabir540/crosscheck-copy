@@ -1,0 +1,101 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-left: 2px solid;
+
+  svg {
+    path {
+      stroke: var(--stroke-d) !important;
+    }
+  }
+
+  .time {
+    // padding-top: 5px;
+    min-width: fit-content;
+    font-feature-settings:
+      'cv11' on,
+      'cv01' on,
+      'ss01' on;
+
+    @include font13;
+    font-style: normal;
+    font-weight: 300;
+    color: var(--font-a);
+    line-height: normal;
+
+    .icon {
+      width: 20px;
+      svg {
+        path {
+          stroke: var(--stroke-d) !important;
+        }
+      }
+    }
+  }
+
+  .desc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      font-feature-settings:
+        'cv11' on,
+        'cv01' on,
+        'ss01' on;
+
+      @include font11;
+      font-style: normal;
+      font-weight: 300;
+      color: var(--font-a);
+      // margin-left: 10px;
+    }
+
+    .iconDiv {
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+.descExpanded {
+  padding: 0px 10px;
+}
+
+.span_style {
+  font-size: 12px !important;
+  min-width: 80px !important;
+}
+.data_navigated_span {
+  width: 250px;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  // text-wrap: wrap !important;
+}
+.data_keypressed_span {
+  font-size: 12px !important;
+}
+.rowHoverClass {
+  background-color: var(--bg-b) !important;
+}
+.adjustable_width {
+  width: calc(100vh - 660px) !important;
+  @media screen and (max-width: $sm) {
+    width: calc(100vh - 750px) !important;
+  }
+}
+.tooltipAdditionStyle {
+  bottom: -120% !important;
+  left: 0% !important;
+  color: var(--font-white) !important;
+}

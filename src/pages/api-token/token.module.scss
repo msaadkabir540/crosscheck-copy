@@ -1,0 +1,44 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.userMain {
+  .createWrapper {
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      &:disabled {
+        pointer-events: none;
+        background-color: var(--bg-f);
+        span {
+          color: var(--font-b) !important;
+        }
+      }
+    }
+    p {
+      color: var(--bg-i);
+      font-size: 15px;
+      font-weight: 400;
+      span {
+        cursor: pointer;
+        color: var(--stroke-b);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .buttonDiv {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+
+    .copyBtn {
+      background: var(--bg-j);
+      border: 1px solid var(--stroke-b);
+      span {
+        color: var(--font-a);
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+.main {
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: flex;
+  width: max-content;
+  align-items: center;
+  margin: auto;
+  .text {
+    @include font13;
+    font-weight: 600;
+    color: var(--font-b);
+  }
+  img {
+    margin-left: 6px;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+}
+
+.selectBoxEllipses {
+  white-space: nowrap;
+  width: 100px !important;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+}
+
+.menuDiv {
+  width: 100px;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  z-index: 3;
+}
+.active {
+  background-color: var(--bg-d);
+  .text {
+    color: var(--font-b);
+  }
+}
+
+.backdropDiv {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j);
+  z-index: 2;
+}

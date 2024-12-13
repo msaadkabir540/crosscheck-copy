@@ -1,0 +1,72 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainDiv {
+  max-width: 275px !important;
+
+  @media (max-width: $sm) {
+    height: max-content !important;
+  }
+
+  .modalTitle {
+    font-weight: 600;
+    @include font18;
+    color: var(--stroke-b);
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .iconRefresh {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+
+    svg {
+      width: 42px;
+      height: 48px;
+    }
+  }
+
+  .iconRefreshLarge {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .mainBtnDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+
+    button {
+      max-width: 100%;
+    }
+  }
+
+  .btnClassUncheckModal {
+    background-color: var(--bg-j);
+    border: 1px solid var(--stroke-b);
+
+    span {
+      color: var(--stroke-b) !important;
+    }
+  }
+}
+
+.backClass {
+  @media (max-width: $sm) {
+    padding: 0px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}

@@ -1,0 +1,132 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.crossImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  img {
+    cursor: pointer;
+  }
+
+  .modalTitle {
+    font-weight: 700;
+    @include font18;
+    color: var(--stroke-b);
+  }
+}
+
+.mainDiv {
+  max-width: 400px !important;
+  min-height: auto !important;
+  padding: 40px !important;
+
+  .upperDiv {
+    height: 217px;
+    overflow: auto;
+    margin-top: 25px;
+
+    &::-webkit-scrollbar {
+      width: 5px !important;
+      background: var(--bg-b) !important;
+      border-radius: 8px !important;
+      display: block !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--bg-f);
+      border-radius: 8px;
+    }
+
+    .rowDiv {
+      padding: 0px 20px;
+      width: 100%;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .mainBtnDiv {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    button {
+      max-width: 240px;
+    }
+  }
+}
+
+.checkbox {
+  border: 1px solid var(--green) !important;
+}
+
+.selectAllDiv {
+  padding: 15px 20px;
+  background: var(--table-row);
+  border-radius: 8px;
+
+  .checkboxClass {
+    font-weight: 700;
+  }
+}
+
+.hover {
+  position: relative;
+
+  &:hover {
+    & > div {
+      opacity: 1;
+      transition-delay: 0.3s;
+    }
+  }
+
+  .tooltip {
+    transition: 0s;
+    opacity: 0;
+    position: absolute;
+    background: var(--bg-a);
+    border: 1px solid var(--stroke-b);
+    box-shadow: 0px 0px 10px var(--bg-shadow);
+    border-radius: 2px 2px 2px 0px;
+    padding: 3px 9px;
+    width: max-content;
+    bottom: 28px;
+    right: -15px;
+    z-index: 200;
+
+    p {
+      font-weight: 400;
+      @include font13;
+      color: var(--font-a);
+      text-transform: capitalize;
+    }
+
+    &::before {
+      content: '';
+      bottom: -15px;
+      right: 15px;
+      transform: rotate(180deg);
+
+      z-index: 2010;
+
+      clip-path: polygon(50% 61%, 0% 100%, 100% 100%);
+      box-shadow: 0px 0px 10px var(--bg-shadow);
+      background: var(--bg-a);
+      height: 16px;
+      width: 14px;
+
+      position: absolute;
+    }
+  }
+}

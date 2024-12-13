@@ -1,0 +1,19 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.radialText {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  text-align: center;
+  p {
+    @include font18;
+    color: var(--font-a);
+  }
+  span {
+    @include font11;
+    color: var(--font-a);
+  }
+}

@@ -1,0 +1,77 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  margin-top: 10px;
+  .h4 {
+    @include font15;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--font-a);
+  }
+  .widgetPanel {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    align-items: flex-start;
+
+    .form {
+      padding: 5px 15px 5px 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .heading {
+        @include font15;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: var(--font-a);
+      }
+      .formField {
+        width: 100%;
+      }
+      .formField1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        .containerClass {
+          padding-left: 20px !important;
+        }
+      }
+    }
+
+    .viewWrapper {
+      position: relative;
+    }
+  }
+  .infoWrapper {
+    .p {
+      @include font15;
+      font-weight: 300;
+      line-height: 18px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: var(--font-a);
+    }
+    .submitWrapper {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      .cancel {
+        border: 1px solid var(--stroke-b) !important;
+
+        background-color: var(--bg-a) !important;
+      }
+      .cancelText {
+        color: var(--font-c) !important;
+      }
+    }
+  }
+}

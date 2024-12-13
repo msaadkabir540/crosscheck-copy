@@ -1,0 +1,56 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainWrapper {
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+
+  .container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    .textWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      .title {
+        @include font40;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .description {
+        color: var(--font-a);
+        @include font24;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+    }
+
+    .btn {
+      border: 1px solid var(--stroke-b);
+      padding: 10px;
+      background-color: var(--bg-d);
+      border-radius: 5px;
+
+      span {
+        color: var(--bg-a);
+        @include font18;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+}

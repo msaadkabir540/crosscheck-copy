@@ -1,0 +1,113 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.icon {
+  path {
+    fill: var(--stroke-e);
+  }
+}
+
+.modalClass {
+  max-width: 500px;
+  padding: 20px !important;
+  overflow-y: visible !important;
+  @media (max-width: 490px) {
+    overflow: auto;
+  }
+}
+
+.crossImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  .modalTitle {
+    font-weight: 700;
+    @include font24;
+    color: var(--font-c);
+  }
+  svg {
+    path {
+      fill: var(--stroke-d);
+    }
+  }
+}
+
+.main {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.innerWrapper {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.divWrapperInner {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+
+  .btnClass {
+    background-color: var(--bg-a);
+    border: 1px solid var(--stroke-b);
+  }
+
+  .btnTitle {
+    color: var(--font-c) !important;
+  }
+}
+
+.filtersGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  @media (max-width: 490px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resetDiv {
+  @media (max-width: 490px) {
+    justify-content: end;
+    width: 100%;
+  }
+
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  justify-content: flex-end;
+
+  img {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    padding: 0px !important;
+  }
+
+  button {
+    max-width: 120px;
+  }
+
+  .applyClass {
+    width: 70px;
+  }
+
+  .reset {
+    max-width: 56px !important;
+    border: 1px solid var(--stroke-b);
+    background-color: var(--bg-j);
+    margin-right: 10px;
+
+    span {
+      color: var(--font-c);
+    }
+  }
+}

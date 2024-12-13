@@ -1,0 +1,51 @@
+@import 'styles/_breakpoints.scss';
+
+.menu {
+  display: none;
+  position: fixed;
+
+  @media (max-width: $sm) {
+    display: block;
+  }
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 90vh;
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+  overflow: auto;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+  z-index: 1001;
+  border-radius: 20px 20px 0px 0px;
+  background: var(--bg-a);
+
+  &.open {
+    transform: translateY(0);
+  }
+
+  .menu-content {
+    padding: 27px 15px 15px 15px;
+
+    .handle {
+      position: absolute;
+      height: 6px;
+      width: 90px;
+      top: -10px;
+      border-radius: 6px;
+      background: var(--bg-b);
+    }
+  }
+}
+
+.displayHidden {
+  display: none;
+
+  @media (max-width: $sm) {
+    display: block;
+    background: var(--bg-modal) !important;
+    position: fixed;
+    inset: 0;
+    z-index: 77;
+  }
+}

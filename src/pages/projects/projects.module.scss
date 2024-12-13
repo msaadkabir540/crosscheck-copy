@@ -1,0 +1,82 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainLower {
+  height: calc(100vh - 240px);
+}
+.menuDiv {
+  @media (max-width: 490px) {
+    display: none;
+  }
+
+  position: absolute;
+  right: 0;
+  top: 40px;
+  z-index: 3;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--stroke-a);
+  padding: 13px 0 4px;
+  position: relative;
+  margin-bottom: 10px;
+
+  p {
+    color: var(--font-c);
+    @include font24;
+    font-weight: 700;
+  }
+  .displaynone {
+    display: none;
+  }
+}
+.menuDivMobile {
+  display: none;
+
+  @media (max-width: 490px) {
+    display: block;
+  }
+
+  .innerDiv {
+    margin-bottom: 16px;
+
+    p {
+      color: var(--font-c);
+
+      @include font13;
+
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+  }
+}
+
+.backdropDiv {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j);
+  z-index: 2;
+}
+
+.iconColor {
+  path {
+    stroke: var(--stroke-d);
+  }
+}
+.menuIcon {
+  cursor: pointer;
+
+  svg {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    path {
+      fill: var(--stroke-d);
+    }
+  }
+}

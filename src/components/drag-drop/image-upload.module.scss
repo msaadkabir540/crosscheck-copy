@@ -1,0 +1,91 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.wraper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  position: relative;
+  border: 2px dashed var(--stroke-a);
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  height: max-content;
+
+  h4 {
+    color: var(--font-a);
+    @include font18;
+  }
+
+  ul {
+    li {
+      color: var(--font-a);
+      @include font15;
+    }
+  }
+
+  .profileImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .imgSection {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+
+    svg {
+      path {
+        stroke: var(--stroke-b);
+      }
+    }
+  }
+}
+
+.heading {
+  color: var(--font-a);
+  @include font18;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  span {
+    cursor: pointer;
+    color: var(--font-c) !important;
+    @include font24;
+    font-weight: 600 !important;
+    margin-left: 5px !important;
+    line-height: 21.15px !important;
+    text-align: left !important;
+  }
+}
+
+.newText {
+  font-family: 'Poppins', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  @include font15;
+  line-height: 20px !important;
+  color: var(--font-a) !important;
+}
+
+.filesUpdate {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  aside {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+}

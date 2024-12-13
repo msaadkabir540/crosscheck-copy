@@ -1,0 +1,108 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.cardWrapper {
+  display: flex;
+  padding: 10px;
+  justify-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: var(--modal-corner, 10px);
+  border: 1px solid var(--stroke-a);
+  background: var(--bg-b);
+  margin-bottom: 10px;
+
+  img {
+    height: 24px !important;
+    width: 24px !important;
+  }
+
+  p {
+    color: var(--font-a);
+    /* Body Font */
+
+    @include font13;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    b {
+      color: var(--font-c);
+    }
+  }
+
+  .invertedComma {
+    color: var(--font-c);
+    /* Heading 4 */
+
+    @include font13;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .changes {
+    color: var(--font-c);
+    /* Heading 4 */
+
+    @include font13;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .singleLine {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .multiLine {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+
+    .infoHeader {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}
+
+.cardWrapper2 {
+  p {
+    @include font13;
+  }
+
+  span {
+    @include font13;
+  }
+}
+
+.infoContent {
+  text-align: start;
+  margin-top: 5px;
+  width: 100%;
+  padding-left: 37px;
+
+  p {
+    @include font11;
+  }
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--font-e);
+  /* Body Font */
+
+  @include font13;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

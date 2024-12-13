@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$animationTime: 2s;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+
+h1 {
+  margin: 40px 0 20px;
+}
+.lock {
+  width: 300px;
+}
+.message {
+  margin-bottom: 20px;
+}

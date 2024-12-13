@@ -1,0 +1,71 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainWrapper {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.tooltip {
+  display: none;
+  border-radius: 6px;
+  background: var(--bg-c);
+  padding: 5px;
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+  position: absolute;
+  top: 55px;
+  color: var(--stroke-b);
+  width: max-content;
+  @include font13;
+  z-index: 200;
+
+  & > div {
+    color: var(--stroke-b);
+  }
+
+  svg {
+    height: 11px;
+    width: 11px;
+  }
+
+  &::before {
+    content: '';
+    top: -15px;
+    left: 50%;
+    right: 50%;
+    transform: rotate(0deg);
+    z-index: 2010;
+    clip-path: polygon(50% 61%, 0% 100%, 100% 100%);
+    box-shadow: 0px 0px 10px var(--bg-shadow);
+    background: var(--bg-a);
+    height: 16px;
+    width: 14px;
+    position: absolute;
+  }
+}
+
+.innerBox {
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--font-a);
+  min-width: fit-content;
+  padding: 0px 5px;
+  @include font18;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+
+  &:hover {
+    & > div {
+      display: block;
+    }
+  }
+}

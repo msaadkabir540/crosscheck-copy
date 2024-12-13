@@ -1,0 +1,174 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.editorContainer {
+  display: flex;
+  border: 1px solid var(--stroke-a);
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  height: 50%;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.switchDiv {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  span {
+    @include font13;
+    color: var(--font-c);
+  }
+}
+
+.undoRedo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  .pointer {
+    cursor: pointer !important;
+  }
+
+  svg {
+    stroke: var(--stroke-b);
+    fill: var(--stroke-b);
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.editor {
+  border: 1px solid var(--stroke-a);
+  border-radius: 4px;
+  padding: 16px;
+  color: var(--font-c) !important;
+  height: 100%;
+}
+
+.colorPallet {
+  height: 20px;
+  width: 20px;
+  background-color: var(--bg-a);
+  border-radius: 3px;
+  border: 1px solid var(--stroke-a);
+  cursor: pointer;
+}
+
+.bubbleMenu {
+  background-color: var(--bg-a);
+  border: 1px solid var(--stroke-a);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  width: fit-content;
+  flex-wrap: wrap;
+
+  .bubbleBtn {
+    width: fit-content;
+    padding: 5px;
+    border-radius: 4px;
+    color: var(--font-c);
+    @include font13;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    .filled {
+      svg {
+        fill: var(--stroke-b);
+      }
+    }
+    svg {
+      stroke: var(--stroke-b);
+      height: 18px;
+      width: 18px;
+    }
+    &:hover {
+      background-color: var(--table-row);
+    }
+  }
+  .btnActive {
+    background-color: var(--table-row);
+
+    color: var(--font-f);
+    &:hover {
+      background-color: var(--table-row);
+    }
+  }
+}
+
+.separator {
+  border: 1px solid var(--stroke-a);
+  height: 20px;
+}
+
+//link modal
+/* tip-tap.module.scss */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    @include font13;
+    color: var(--font-c);
+  }
+}
+
+.modalContent {
+  background: var(--bg-a);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: left;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.btnDiv {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+strike,
+s {
+  text-decoration: line-through;
+}
+u,
+ins {
+  text-decoration: underline;
+}
+
+ol {
+  list-style-type: decimal !important;
+  padding-left: 10px;
+  margin: 0 0 10px 0;
+}
+ul {
+  list-style-type: disc !important;
+  padding-left: 10px;
+  margin: 0 0 10px 0;
+}

@@ -1,0 +1,202 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+.darkMode {
+  background: var(--bg-i) !important;
+  .headerDiv {
+    p {
+      color: var(--bg-a) !important;
+      &:hover {
+        background-color: var(--bg-a) !important;
+        color: var(--bg-i) !important;
+      }
+    }
+  }
+  .p {
+    color: var(--bg-a);
+  }
+  .hover {
+    &:hover {
+      background-color: var(--bg-a) !important;
+      .p {
+        color: var(--bg-i) !important;
+      }
+    }
+  }
+  .menuMain {
+    background: var(--bg-i) !important;
+    .pInner {
+      color: var(--bg-a) !important;
+      &:hover {
+        background: var(--bg-a) !important;
+        color: var(--bg-i) !important;
+      }
+    }
+    .pSelected {
+      color: var(--bg-i) !important;
+      background-color: var(--bg-a) !important;
+    }
+  }
+}
+.menu {
+  border-radius: var(--Input-Fields-Border-Radius, 5px);
+  border: 1px solid var(--stroke-a);
+  background: var(--bg-a);
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+
+  .headerDiv {
+    display: flex;
+    padding-bottom: var(--paddings-margins-padding-basic, 10px);
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    .pClass {
+      padding: 10px 15px;
+    }
+    p {
+      border: 1px solid var(--stroke-a);
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      color: var(--font-a);
+      @include font13;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      &:hover {
+        background-color: var(--Shadow-B, rgba(7, 25, 82, 0.1));
+      }
+      &:active {
+        background-color: var(--bg-d);
+        color: var(--font-b) !important;
+      }
+    }
+  }
+
+  .body {
+    padding-top: 5px;
+    .inner {
+      display: flex;
+      height: 40px;
+      padding: 4px 4px;
+      align-items: center;
+      gap: 15px;
+      cursor: pointer;
+      svg {
+        height: 16px;
+        width: 16px;
+        cursor: pointer;
+      }
+    }
+    // NOTE: preventing delete icon to change color on hover
+    &:last-child {
+      .hover {
+        &:last-child {
+          :hover {
+            svg {
+              filter: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.p {
+  color: var(--font-a);
+  @include font13;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.editColor {
+  stroke: var(--stroke-d) !important;
+}
+
+.hover {
+  border-radius: var(--radius-input-button-radius, 5px);
+  background: var(--bg-j);
+  &:hover {
+    background: var(--Shadow-B, rgba(7, 25, 82, 0.1));
+    .inner {
+      svg {
+        filter: brightness(0.5);
+      }
+    }
+  }
+}
+.menuMain {
+  width: 150px;
+  top: 98px;
+  border: 1px solid var(--stroke-a);
+  border-radius: var(--Input-Fields-Border-Radius, 5px);
+  background: var(--bg-a);
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+  left: 0px;
+  .pInner {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-a);
+    @include font13;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    border-radius: 5px;
+    &:hover {
+      background: var(--Shadow-B, rgba(7, 25, 82, 0.1));
+    }
+    &:active {
+      background-color: var(--bg-d);
+      color: var(--bg-a) !important;
+    }
+  }
+  .pSelected {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-a);
+    @include font13;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    border-radius: 5px;
+    background: var(--Shadow-B, rgba(7, 25, 82, 0.1));
+  }
+}
+
+.spaceBtwClass {
+  justify-content: space-between;
+}
+
+.pClassBorderLeft {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.pClassBorderRight {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.innerIconInvert {
+  svg {
+    filter: invert(1);
+  }
+}
+
+.redICon {
+  svg {
+    filter: invert(0);
+  }
+}

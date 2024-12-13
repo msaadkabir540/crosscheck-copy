@@ -1,0 +1,41 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: max-content;
+  height: 35px;
+  width: 100%;
+  border-radius: var(--Padding, 10px);
+  background: var(--light-red);
+  cursor: pointer;
+  border: 0px solid var(--bg-j);
+  box-shadow: var(--bg-j);
+  padding: 10px;
+  color: var(--font-b);
+  &:disabled {
+    background-color: var(--bg-i);
+    span {
+      color: var(--font-a) !important;
+    }
+  }
+
+  .img {
+    margin-right: 10px;
+    width: 17.997px;
+    height: 18.462px;
+  }
+  svg {
+    margin-right: 10px;
+    width: 12px;
+    height: 13px;
+  }
+
+  .btnTitle {
+    color: var(--font-b);
+
+    @include font15;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}

@@ -1,0 +1,230 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.tableRowClicked {
+  border-bottom: 1px solid var(--stroke-a) !important;
+  border-radius: 0px !important;
+
+  div {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+  }
+
+  p {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    max-width: 200px !important;
+  }
+
+  &:hover {
+    p {
+      cursor: pointer;
+    }
+  }
+}
+
+.tableRow {
+  border-bottom: 1px solid var(--stroke-a) !important;
+  border-radius: 0px !important;
+  cursor: pointer;
+  max-height: 36px !important;
+
+  div {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    transition: all 0.3s ease;
+
+    /* Add smooth transition */
+    @media (max-width: 380px) {
+      overflow: visible !important;
+    }
+  }
+
+  p {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    max-width: 140px !important;
+    white-space: nowrap !important;
+    transition: all 0.3s ease;
+    /* Add smooth transition */
+  }
+
+  &:hover {
+    p {
+      cursor: pointer;
+    }
+  }
+}
+
+table {
+  td {
+    padding: 0px !important;
+  }
+}
+
+.columnSpan {
+  &:hover .sortingIcon {
+    visibility: visible;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 8px !important;
+  position: relative;
+}
+
+.sortingIcon {
+  display: block;
+  visibility: hidden;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  svg {
+    path {
+      stroke: var(--stroke-d);
+    }
+  }
+}
+
+.rowHoverClass {
+  background-color: var(--bg-j) !important;
+  border-bottom: 1px solid var(--stroke-a) !important;
+  border-radius: 0px !important;
+  border-spacing: 0px 0px !important;
+
+  &:hover {
+    background: var(--bg-b) !important;
+
+    td {
+      p {
+        color: var(--text-color3-hover);
+      }
+    }
+  }
+}
+
+.selectedItemClass {
+  background-color: var(--bg-b) !important;
+}
+
+.rightClickMenu {
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  z-index: 9999;
+  right: 30px;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j) !important;
+  z-index: 4;
+  backdrop-filter: blur(1px);
+  /* Adjust the blur radius as needed */
+}
+
+.sortModal {
+  position: absolute;
+  display: flex;
+  width: 170px;
+  padding: 5px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  z-index: 4;
+  top: 48px;
+
+  border-radius: 5px;
+  background: var(--bg-a);
+  left: 0;
+
+  /* Menu */
+  box-shadow: 0px 0px 6px 0px var(--bg-shadow);
+
+  .sortOption {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 5px;
+    z-index: 1000;
+    p {
+      color: var(--Fonts-Font-B);
+      padding: 5px;
+      font-family: var(--family-font-family-app, 'Public Sans');
+      @include font13;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+    img {
+      width: 10px;
+      height: 10px;
+    }
+    .activeImg {
+      width: 15px;
+      height: 10px;
+      left: -10px !important;
+    }
+
+    .ascendingClass {
+      svg {
+        path {
+          stroke: var(--stroke-d) !important;
+        }
+      }
+    }
+
+    &:hover {
+      background: var(--bg-b) !important;
+    }
+  }
+}
+
+.filterIcon {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  right: -10px;
+}
+
+.tableClass {
+  table-layout: fixed;
+  position: relative;
+}
+
+.innerTable {
+  position: relative;
+  height: 100%;
+}
+
+.headerClass {
+  padding: 0px 10px;
+  border-bottom: 1px solid var(--stroke-a);
+}
+
+.notFoundDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.sortBackdrop {
+  inset: 0;
+  z-index: 3;
+  position: fixed;
+  background-color: var(--bg-j);
+}
+.genericTd {
+  padding: 10px;
+  overflow-wrap: anywhere;
+  position: relative;
+}

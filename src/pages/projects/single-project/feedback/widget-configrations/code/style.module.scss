@@ -1,0 +1,20 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+.view {
+  background-color: var(--bg-c);
+  border: 1px solid var(--stroke-a);
+  margin: 10px 0;
+  height: 75vh;
+  overflow: auto;
+  border-radius: 5px;
+  p {
+    margin: 10px;
+
+    @include font15;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}

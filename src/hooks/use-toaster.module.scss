@@ -1,0 +1,34 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.toastClass {
+  color: var(--font-a);
+}
+
+.iconClass {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.innerDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.titleClass {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bodyClass {
+  font-size: 13px;
+}

@@ -1,0 +1,65 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mobileHeader {
+  height: 50px;
+  width: 100%;
+  background-color: var(--nav-background-color1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+
+  .imgDiv {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: -9px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid var(--bg-a);
+      cursor: pointer;
+    }
+
+    span {
+      margin-right: -9px;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--stroke-b);
+      color: var(--bg-a);
+      border-radius: 50%;
+      @include font11;
+      font-weight: 400;
+      border: 2px solid var(--bg-a);
+      cursor: pointer;
+    }
+
+    p {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--stroke-b);
+      color: var(--bg-a);
+      border-radius: 50%;
+      @include font11;
+      font-weight: 400;
+      border: 1px solid var(--bg-a);
+      cursor: pointer;
+    }
+  }
+}
+
+.rotateDiv {
+  & > div {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}

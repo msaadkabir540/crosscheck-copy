@@ -1,0 +1,80 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainWrapper {
+  @include gridThree(10, 10);
+
+  @media (max-width: $sm) {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+.main {
+  display: flex;
+  border: 1px solid var(--stroke-a);
+  background: var(--bg-a);
+  width: 100%;
+  padding: var(--Modal-Padding, 20px);
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+  border-radius: 10px;
+}
+
+.heading {
+  color: var(--font-c);
+
+  @include font13;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.count {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: var(--font-a);
+  font-feature-settings:
+    'clig' off,
+    'liga' off;
+
+  @include font24;
+
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.chartDiv {
+  height: 42px !important;
+  width: 100% !important;
+
+  @media (max-width: $xs) {
+    width: 70% !important;
+  }
+
+  .chart {
+    height: 42px;
+    width: 90% !important;
+
+    @media (max-width: 500px) {
+      width: 100% !important;
+    }
+  }
+}
+
+.subHeading {
+  color: var(--font-a);
+
+  @include font13;
+
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+  width: 100%;
+}

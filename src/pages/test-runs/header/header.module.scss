@@ -1,0 +1,117 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainHeader {
+  .grid {
+    @media (max-width: 490px) {
+      width: 100%;
+      flex-direction: column;
+    }
+    .gridInner {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    justify-content: space-between;
+
+    .datePicker {
+      min-width: 230px !important;
+      width: max-content;
+
+      @media (max-width: $sm) {
+        max-width: 100%;
+        margin-right: 0px;
+      }
+
+      @media (max-width: 490px) {
+        width: 100%;
+      }
+    }
+
+    .statusBar {
+      min-width: 230px !important;
+      width: max-content;
+
+      @media (max-width: $sm) {
+        max-width: 100%;
+        margin-right: 0px;
+      }
+
+      @media (max-width: 490px) {
+        width: 100%;
+      }
+    }
+
+    .resetDiv {
+      @media (max-width: 490px) {
+        justify-content: end;
+        width: 30%;
+      }
+
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      justify-content: flex-end;
+
+      img {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        padding: 0px !important;
+      }
+
+      button {
+        max-width: 120px;
+      }
+
+      .applyClass {
+        width: 100px;
+      }
+
+      .reset {
+        max-width: 56px !important;
+        border: 1px solid var(--stroke-b);
+        background-color: var(--bg-j);
+        margin-left: 10px;
+        margin-right: 10px;
+
+        span {
+          color: var(--stroke-b);
+        }
+      }
+    }
+  }
+}
+
+.dynamicClass {
+  min-height: 41px !important;
+}
+
+.zDynamicState4 {
+  z-index: 400 !important;
+}
+
+.zDynamicState45 {
+  z-index: 401 !important;
+}
+
+.z1 {
+  z-index: 100;
+}
+.z2 {
+  z-index: 99;
+}
+.z3 {
+  z-index: 98;
+}
+.z4 {
+  z-index: 97;
+}

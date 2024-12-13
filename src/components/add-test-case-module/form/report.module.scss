@@ -1,0 +1,45 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  height: 75vh;
+  overflow: auto;
+  transition: all 1.6s;
+  z-index: 300;
+  .input {
+    width: 388px;
+    position: fixed;
+    right: 20px;
+    z-index: 900;
+    top: 18px;
+  }
+
+  .bottom {
+    .gridTwo {
+      @include gridTwo(10, 10);
+    }
+    .gridThree {
+      @include gridThree(10, 10);
+    }
+    .tagDiv {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding-bottom: 20px;
+
+      .tagSectionInner {
+        width: 70%;
+      }
+
+      .tagSectionInner1 {
+        width: 34%;
+      }
+    }
+
+    .marginClass {
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.inputWrapper {
+  position: relative;
+}
+.inputContainer {
+  position: relative;
+
+  label {
+    font-weight: 500;
+    @include font13;
+    color: var(--font-a);
+    line-height: 27px;
+    text-transform: capitalize;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    div {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--red);
+    }
+  }
+
+  input[type='range'] {
+    padding: 0 !important;
+  }
+
+  input {
+    height: 35px;
+    background-color: var(--bg-a);
+    border: 1px solid var(--stroke-a);
+    border-radius: 5.06897px;
+    padding: 10px 35px 10px 10px;
+    @include font13;
+    color: var(--font-a) !important;
+    font-weight: 500;
+    width: 100%;
+
+    &::-webkit-credentials-auto-fill-button {
+      visibility: hidden !important;
+      position: absolute !important;
+      right: 0 !important;
+    }
+
+    &:focus {
+      outline: 1px solid var(--bg-j);
+      border: 1px solid var(--stroke-b);
+    }
+
+    &:active {
+      border: 1px solid var(--stroke-b);
+    }
+
+    &::placeholder {
+      font-weight: 300;
+      @include font13;
+      color: var(--font-e);
+    }
+  }
+
+  .icon {
+    cursor: pointer;
+    position: absolute;
+    right: 13px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+
+    path {
+      stroke: var(--stroke-e);
+    }
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  .beforeIcon {
+    cursor: pointer;
+    position: absolute;
+    left: 13px;
+    top: 8px;
+    width: 16px !important;
+    height: 16px !important;
+
+    img {
+      height: 16px !important;
+      width: 16px !important;
+    }
+
+    svg {
+      height: 16px !important;
+      width: 16px !important;
+    }
+  }
+
+  .crossIcon {
+    position: absolute;
+    right: 13px;
+    top: 12px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+
+  .errorMessage {
+    display: block;
+    @include font13;
+    margin-left: 5px;
+    color: var(--red);
+  }
+}
+
+input[type='password'] {
+  &::placeholder {
+    position: relative;
+    top: 0px !important;
+  }
+}

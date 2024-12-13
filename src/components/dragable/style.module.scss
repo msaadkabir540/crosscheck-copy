@@ -1,0 +1,14 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.relativeClass {
+  position: relative;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 4;
+  inset: 0;
+  background-color: var(--bg-j);
+}

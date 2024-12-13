@@ -1,0 +1,282 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  margin-top: 10px;
+}
+
+.grid {
+  @include gridTwo(10, 10);
+  margin-top: 10px;
+
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+  }
+
+  .milestoneDiv {
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.left {
+  padding: 10px;
+  border: 1px solid var(--stroke-a);
+  background-color: var(--bg-a);
+  border-radius: 10px;
+  height: calc(100vh - 160px);
+  overflow-y: auto;
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h6 {
+      font-weight: 600;
+      @include font15;
+      color: var(--font-c);
+    }
+
+    .featureH6 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .innerFlex {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      p {
+        font-weight: 500;
+        @include font13;
+        color: var(--font-c);
+      }
+    }
+
+    .p {
+      font-weight: 400;
+      @include font13;
+      color: var(--font-a);
+    }
+  }
+}
+
+.popUpAbs {
+  position: absolute;
+  z-index: 1000;
+}
+
+.popUp {
+  @media (max-width: 550px) {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  position: absolute;
+  width: 100px;
+  background: var(--bg-c);
+  box-shadow: 0px 0px 10px var(--bg-shadow);
+  border-radius: 6px;
+  right: 10px;
+  top: 100%;
+  z-index: 4;
+
+  p {
+    font-weight: 400;
+    @include font13;
+    color: var(--font-a);
+    cursor: pointer;
+  }
+}
+
+.popUpMenu {
+  @media (max-width: 550px) {
+    display: flex;
+  }
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+  gap: 16px;
+  align-self: stretch;
+
+  p {
+    color: var(--font-c);
+    @include font13;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
+
+.height {
+  height: calc(100vh - 217px);
+  overflow-y: auto;
+  margin-top: 10px;
+
+  &::-webkit-scrollbar:vertical {
+    width: 5px;
+    /* Remove scrollbar space */
+    background: var(--bg-b);
+    /* Optional: just make scrollbar invisible */
+    height: 5px;
+    border-radius: 8px;
+    display: block !important;
+  }
+}
+
+.flex1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--stroke-a);
+  position: relative;
+  cursor: pointer !important;
+
+  .flex1inner {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    img {
+      cursor: grab;
+    }
+  }
+
+  &:hover {
+    background-color: var(--bg-b);
+
+    .img {
+      visibility: visible;
+      cursor: grab;
+    }
+
+    .p {
+      color: var(--font-a);
+    }
+
+    svg {
+      path {
+        fill: var(--stroke-b) !important;
+      }
+    }
+  }
+
+  .icon {
+    cursor: pointer;
+    path {
+      fill: var(--stroke-e);
+    }
+  }
+
+  .icon2 {
+    cursor: pointer;
+    path {
+      stroke: var(--stroke-b);
+    }
+  }
+
+  .img {
+    visibility: hidden;
+  }
+
+  .p {
+    font-weight: 400;
+    @include font13;
+    color: var(--font-a);
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.renameField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--stroke-b);
+
+  input {
+    width: 80%;
+    height: 100%;
+    color: var(--font-c);
+    margin-left: 24px;
+    border: 0px solid var(--bg-j);
+    box-shadow: var(--bg-j);
+    outline: 1px solid var(--bg-j);
+    font-weight: 400;
+    @include font15;
+    background-color: var(--bg-j);
+  }
+
+  .moreInner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.draggableItem {
+  padding: 10px 15px;
+  max-width: 180px;
+  margin: auto;
+  background: var(--blue);
+  color: var(--font-b);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.draggableItem:hover {
+  background: var(--bg-d);
+}
+
+.draggableItem:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.backdropDiv {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j);
+  z-index: 2;
+}
+
+.animatedGrid {
+  transition: width 0.5s ease-in-out;
+}
+
+.selected {
+  background: var(--bg-b);
+
+  .img {
+    visibility: visible !important;
+  }
+}

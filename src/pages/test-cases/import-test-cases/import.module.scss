@@ -1,0 +1,66 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .backIcon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--stroke-b);
+    span {
+      margin-bottom: 5px;
+    }
+  }
+
+  .selectProject {
+    span {
+      @include font13;
+      font-weight: 500;
+    }
+  }
+
+  .selectFile {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      @include font15;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  p {
+    @include font13;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    color: var(--font-a);
+
+    a {
+      color: var(--light-red);
+    }
+  }
+
+  .proceedBtn {
+    align-self: flex-end;
+    color: var(--red);
+  }
+}
+
+.selectBoxClass {
+  padding: 20px;
+}
+
+.warnText {
+  @include font11;
+  font-weight: 400;
+  color: var(--light-red);
+  margin-top: 10px;
+}

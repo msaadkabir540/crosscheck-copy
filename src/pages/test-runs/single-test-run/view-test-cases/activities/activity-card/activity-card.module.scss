@@ -1,0 +1,87 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.cardWrapper {
+  display: flex;
+  padding: 10px;
+  justify-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: var(--modal-corner, 10px);
+  border: 1px solid var(--stroke-a);
+  background: var(--bg-a);
+  margin-bottom: 10px;
+
+  p {
+    color: var(--font-a);
+    /* Body Font */
+
+    @include font13;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .invertedComma {
+    color: var(--stroke-b);
+    /* Heading 4 */
+
+    @include font13;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .changes {
+    color: var(--stroke-b);
+    /* Heading 4 */
+
+    @include font13;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .singleLine {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .multiLine {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+
+    .infoHeader {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}
+
+.infoContent {
+  text-align: start;
+  margin-top: 5px;
+
+  width: 100%;
+  padding-left: 37px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--font-e);
+  /* Body Font */
+
+  @include font13;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

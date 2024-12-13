@@ -1,0 +1,256 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.left {
+  border: 1px solid var(--stroke-a);
+  background-color: var(--bg-a);
+  border-radius: 10px;
+  height: calc(100vh - 160px);
+  overflow-y: auto;
+
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h6 {
+      font-weight: 600;
+      @include font15;
+      color: var(--font-c);
+    }
+
+    .innerFlex {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      p {
+        font-weight: 500;
+        @include font13;
+        color: var(--font-c);
+      }
+    }
+
+    .p {
+      font-weight: 400;
+      @include font13;
+      color: var(--font-a);
+    }
+  }
+}
+.popUp {
+  @media (max-width: 550px) {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  position: absolute;
+  width: 100px;
+  background: var(--bg-c);
+  box-shadow: 0px 0px 10px var(--bg-shadow);
+  border-radius: 6px;
+  right: 10px;
+  top: 100%;
+  z-index: 4;
+
+  p {
+    font-weight: 400;
+    @include font13;
+    color: var(--font-a);
+    cursor: pointer;
+  }
+}
+.popUpMenu {
+  @media (max-width: 550px) {
+    display: flex;
+  }
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+  gap: 16px;
+  align-self: stretch;
+
+  p {
+    color: var(--font-c);
+
+    @include font13;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
+.height {
+  height: calc(100vh - 217px);
+  overflow-y: auto;
+  margin-top: 10px;
+
+  &::-webkit-scrollbar:vertical {
+    width: 5px;
+    background: var(--bg-b);
+    height: 5px;
+    border-radius: 8px;
+    display: block !important;
+  }
+}
+.flex1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+  cursor: pointer !important;
+
+  &:hover {
+    background-color: var(--bg-b);
+    border-radius: 5px;
+
+    .img {
+      visibility: visible;
+    }
+
+    .p {
+      color: var(--font-a);
+    }
+  }
+  .icon {
+    cursor: pointer;
+    path {
+      fill: var(--stroke-e);
+    }
+  }
+  .icon2 {
+    cursor: pointer;
+    path {
+      stroke: var(--stroke-b);
+    }
+  }
+  .img {
+    visibility: hidden;
+  }
+
+  .p {
+    font-weight: 400;
+    @include font13;
+    color: var(--font-a);
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
+.renameField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--stroke-b);
+
+  input {
+    width: 80%;
+    height: 100%;
+    color: var(--font-c);
+    margin-left: 24px;
+    border: 0px solid var(--bg-j);
+    box-shadow: var(--bg-j);
+    outline: 1px solid var(--bg-j);
+    font-weight: 400;
+    @include font15;
+    background-color: var(--bg-j);
+  }
+
+  .moreInner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.draggableItem {
+  padding: 10px 15px;
+  max-width: 180px;
+  margin: auto;
+  background: var(--blue);
+  color: var(--font-b);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.draggableItem:hover {
+  background: var(--bg-d);
+}
+
+.draggableItem:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.backdropDiv {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j);
+  z-index: 2;
+}
+
+.selected {
+  background: var(--bg-b);
+
+  .img {
+    visibility: visible !important;
+  }
+}
+
+.imgDel {
+  height: 16px;
+  width: 16px;
+  margin-bottom: 3px;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.searchDiv {
+  padding: 10px 0px;
+  input {
+    padding-left: 35px;
+  }
+}
+
+.startIcon {
+  left: 13px;
+}
+
+.testEnvName {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.editIconClass {
+  display: flex;
+  gap: 10px;
+}

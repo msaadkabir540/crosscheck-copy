@@ -1,0 +1,217 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.welcomeLoaderContainer {
+  display: flex !important;
+  padding: 0px;
+  align-items: center;
+  width: 100%;
+}
+
+.welcomeDivLoader {
+  flex: 1;
+}
+.welcomeDivLoaderBtn {
+  display: none;
+}
+
+.leftLoaderContainer {
+  display: flex;
+  height: 100%;
+  width: 65%;
+  padding: 0px;
+  border-radius: var(--numbers-modal-corner, 10px);
+  div {
+    height: 100%;
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+.rightLoaderContainer {
+  display: flex;
+  height: 100%;
+  width: 35%;
+  padding: 0px;
+  border-radius: var(--numbers-modal-corner, 10px);
+  div {
+    height: 100%;
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+.bottomLoaderContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  border-radius: var(--numbers-modal-corner, 10px);
+  div {
+    height: 100%;
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upperDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  .boxWidth {
+    width: 292px !important;
+
+    @media (max-width: 450px) {
+      width: 100% !important;
+    }
+  }
+}
+
+.middleDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 326px;
+  width: 100%;
+
+  @media (max-width: $md) {
+    height: 100%;
+    align-items: start;
+  }
+
+  @media (max-width: $sm) {
+    flex-direction: column;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 65%;
+
+    @media (max-width: $md) {
+      width: 50%;
+      height: 100%;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+
+    .activeProjects {
+      overflow-y: scroll;
+      display: flex;
+      width: 70%;
+      height: 100%;
+      max-height: 300px;
+
+      @media (max-width: $md) {
+        width: 100%;
+      }
+
+      min-height: 326px;
+      padding: var(--Modal-Padding, 20px);
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--Modal-Padding, 10px);
+      flex-shrink: 0;
+      border-radius: 10px;
+      border: 1px solid var(--stroke-a);
+      background: var(--bg-a);
+
+      h2 {
+        color: var(--font-c);
+        font-feature-settings:
+          'clig' off,
+          'liga' off;
+
+        @include font24;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .projectsBar {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        gap: var(--Modal-Padding, 20px);
+        justify-content: space-between;
+        border-radius: 5px;
+        border: 1px solid var(--stroke-a);
+
+        span {
+          color: var(--font-c);
+
+          @include font18;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+        }
+      }
+    }
+
+    .valueBoxDiv {
+      @media (max-width: $md) {
+        width: 100%;
+        flex-direction: row;
+      }
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
+
+      width: 30%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 20px;
+
+      .valueBoxClass {
+        height: 153px;
+        width: 100%;
+      }
+    }
+  }
+
+  .right {
+    width: 35%;
+    height: 326px;
+
+    @media (max-width: $md) {
+      width: 50%;
+      display: flex;
+    }
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+  }
+}
+
+.lowerDiv {
+  @include gridThree(10, 10);
+
+  @media (max-width: $sm) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  height: 326px;
+
+  .innerCards {
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.custom_font_size {
+  @include font15;
+}

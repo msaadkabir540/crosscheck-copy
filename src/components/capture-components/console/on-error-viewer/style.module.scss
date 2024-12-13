@@ -1,0 +1,51 @@
+.main {
+  font-family: Consolas, monospace !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.child_container_one {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  overflow-x: auto;
+}
+
+.text_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text_wrapper_left {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+
+  div {
+    @include font13;
+  }
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.time {
+  @include font13;
+  width: 30px;
+}
+
+.object_viewer {
+  svg {
+    display: none !important;
+    @include font13;
+  }
+}
+
+.data_span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}

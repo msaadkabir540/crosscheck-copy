@@ -1,0 +1,144 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.multiLevelSelect {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  .lbl {
+    font-weight: 500;
+    @include font13;
+    color: var(--font-a);
+    line-height: 27px;
+    margin-left: 7px;
+    margin-bottom: 5px !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .selectBox {
+    width: 100%;
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid var(--stroke-a);
+    cursor: pointer;
+    padding: 10px;
+    background-color: var(--bg-a);
+    display: flex;
+    align-items: center;
+
+    .displayValueOnly {
+      color: var(--font-a);
+      @include font15;
+      font-weight: 400;
+      flex-grow: 1;
+
+      .placeHolder {
+        color: var(--font-e);
+      }
+    }
+
+    svg {
+      fill: var(--stroke-e);
+      stroke: var(--stroke-e);
+      margin-left: auto;
+    }
+  }
+
+  .selectDiv {
+    position: absolute;
+    top: 115%;
+    left: 0;
+    right: 0;
+    background: var(--bg-a);
+    border: 1px solid var(--stroke-a);
+    box-shadow: var(--bg-j);
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 6px;
+
+    .optionDiv {
+      .option {
+        min-height: 50px;
+        padding: 8px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &:hover {
+          background-color: var(--hover);
+        }
+
+        .mainOption {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+
+          input[type='checkbox'] {
+            margin: 0;
+            width: 17px;
+            height: 17px;
+            background-color: var(--bg-j);
+            border: 1px solid var(--stroke-b);
+            border-radius: 4px;
+            position: relative;
+            cursor: pointer;
+
+            &:checked::before {
+              content: '\2714';
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: var(--icon);
+              height: 17px;
+              width: 17px;
+              background-color: var(--stroke-b);
+            }
+
+            &:focus,
+            &:active {
+              border: 1px solid var(--stroke-d);
+            }
+          }
+
+          span {
+            flex-grow: 1;
+            font-weight: 500;
+            color: var(--font-a);
+            @include font13;
+          }
+        }
+
+        .children {
+          margin-top: 5px;
+          padding-left: 20px;
+          border-left: 1px solid var(--stroke-b);
+        }
+      }
+    }
+  }
+
+  .errorMessage {
+    display: block;
+    @include font13;
+    color: var(--red) !important;
+    font-weight: 300 !important;
+    margin-top: 5px !important;
+  }
+}
+.backdropDiv {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j);
+  z-index: 2;
+}

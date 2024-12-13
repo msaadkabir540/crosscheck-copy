@@ -1,0 +1,17 @@
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Naviagate" clip-path="url(#clip0_17269_99368)">
+<path id="Vector" d="M7.5 9.375C9.57107 9.375 11.25 7.69607 11.25 5.625C11.25 3.55393 9.57107 1.875 7.5 1.875C5.42893 1.875 3.75 3.55393 3.75 5.625C3.75 7.69607 5.42893 9.375 7.5 9.375Z" stroke="#2A2C33" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M7.5 1.875C8.33312 2.08313 8.75 3.33312 8.75 5.625C8.75 7.91688 8.33312 9.16687 7.5 9.375" stroke="#2A2C33" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M7.5 1.875C6.66688 2.08313 6.25 3.33312 6.25 5.625C6.25 7.91688 6.66688 9.16687 7.5 9.375" stroke="#2A2C33" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M3.75 5.625H11.25" stroke="#2A2C33" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M1.875 11.875H6.25" stroke="#2A2C33" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M8.75 11.875H13.125" stroke="#2A2C33" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_7" d="M7.5 13.125C8.19036 13.125 8.75 12.5654 8.75 11.875C8.75 11.1846 8.19036 10.625 7.5 10.625C6.80964 10.625 6.25 11.1846 6.25 11.875C6.25 12.5654 6.80964 13.125 7.5 13.125Z" stroke="#2A2C33" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_8" d="M7.5 9.375V10.625" stroke="#2A2C33" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_17269_99368">
+<rect width="15" height="15" fill="white"/>
+</clipPath>
+</defs>
+</svg>

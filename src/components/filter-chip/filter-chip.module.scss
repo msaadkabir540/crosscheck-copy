@@ -1,0 +1,172 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  position: relative;
+  min-width: fit-content;
+  max-height: 25px !important;
+
+  cursor: pointer;
+  border: 0.5px solid var(--stroke-d);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  h4 {
+    @include font13;
+    font-weight: 600;
+    color: var(--font-a);
+  }
+
+  svg {
+    height: 12px;
+    width: 12px;
+  }
+}
+.btns {
+  bottom: 0px;
+  position: sticky;
+  cursor: default;
+  background-color: var(--bg-c);
+  border-top: 1px solid var(--stroke-a);
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--font-c);
+  gap: 15px;
+  padding: 4px 10px 4px 10px;
+
+  span {
+    cursor: pointer;
+    padding: 5px;
+    @include font13;
+    border-radius: 5px;
+    color: var(--font-c);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.menu {
+  width: 200px;
+  position: absolute;
+  max-height: 320px;
+  overflow-y: auto;
+  top: 30px;
+  // left: 0px;
+  z-index: 20;
+  border-radius: 5px;
+  background-color: var(--bg-c);
+  border: 1px solid var(--stroke-a);
+
+  .singleOpt {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: var(--font-c);
+    gap: 15px;
+    padding: 4px 10px 4px 10px;
+    span {
+      color: var(--font-c);
+      @include font15;
+    }
+
+    &:hover {
+      background-color: var(--hover);
+    }
+
+    img {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+    }
+
+    .nameIcon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-color: var(--stroke-b);
+      border-radius: 50%;
+      height: 24px;
+      width: 24px;
+      color: var(--font-b);
+    }
+  }
+}
+
+.formatOptionLabelInput {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  background-color: var(--bg-j);
+  border: 1px solid var(--stroke-b);
+  border-radius: 4px;
+  outline: 1px solid var(--bg-j);
+  cursor: pointer;
+  position: relative;
+}
+
+.backdropDiv {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j);
+  z-index: 10;
+}
+
+.noOption {
+  color: var(--font-e);
+  text-align: center;
+  justify-content: center;
+}
+
+.orangeIcon {
+  path {
+    stroke: var(--light-red);
+  }
+}
+
+.search {
+  top: 0px;
+  position: sticky;
+  cursor: default;
+  background-color: var(--bg-c);
+  border-bottom: 1px solid var(--stroke-a);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--font-a);
+  padding: 4px 10px 4px 10px;
+  z-index: 10;
+
+  svg {
+    height: 16px;
+    width: 16px;
+    padding-bottom: 5px;
+    path {
+      fill: var(--stroke-e);
+    }
+  }
+
+  input {
+    background-color: var(--bg-c);
+    border: var(--bg-j) !important;
+    @include font13;
+
+    &::placeholder {
+      @include font13;
+      color: var(--font-e);
+
+      font-weight: 300;
+      line-height: 15px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+}

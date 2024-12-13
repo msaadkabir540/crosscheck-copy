@@ -1,0 +1,74 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainDiv {
+  @media (max-width: 550px) {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--stroke-a);
+    padding: 13px 0 4px;
+    position: relative;
+    margin-bottom: 10px;
+
+    p {
+      color: var(--stroke-b);
+      @include font24;
+      font-weight: 700;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.menuDiv {
+  @media (max-width: 550px) {
+    display: none;
+  }
+
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+
+.mainDivMobile {
+  @media (max-width: 550px) {
+    display: block;
+  }
+
+  display: none;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--stroke-a);
+    padding: 13px 0 4px;
+    position: relative;
+    margin-bottom: 10px;
+
+    p {
+      color: var(--stroke-b);
+      @include font24;
+      font-weight: 700;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.backdropDiv {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j);
+  z-index: 2;
+}

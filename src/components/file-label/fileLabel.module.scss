@@ -1,0 +1,80 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 20px;
+  border: 2px solid var(--border);
+  max-height: 45px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+
+  .fileName {
+    display: flex;
+    gap: 10px;
+
+    @include font13;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    align-items: center;
+
+    button {
+      padding: 5px;
+      border: 1px solid var(--font-a);
+      border-radius: 3px;
+      background: var(--bg-j);
+      height: 25px;
+    }
+
+    p {
+      @include font13;
+      font-weight: 300;
+      line-height: 15.28px;
+      text-align: left;
+    }
+  }
+
+  .changeIcon {
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
+    span {
+      color: var(--light-red);
+
+      @include font13;
+      font-weight: 600;
+      line-height: 15.28px;
+      text-align: left;
+    }
+  }
+
+  .removeIcon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+
+    span {
+      color: var(--red);
+    }
+  }
+}
+
+.iconText {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-top: 0px !important;
+  svg {
+    margin-top: -1.5px;
+  }
+}

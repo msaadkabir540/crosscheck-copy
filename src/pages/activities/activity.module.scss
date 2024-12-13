@@ -1,0 +1,82 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.activityWrapper {
+  margin-top: 10px;
+
+  .dayText {
+    color: var(--font-c);
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+    /* Heading 2 */
+
+    @include font24;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .activitiesSection {
+    padding: 10px 50px;
+
+    @media (max-width: $sm) {
+      padding: 10px 10px;
+    }
+  }
+}
+
+.headerDiv {
+  margin-top: 10px;
+  @media (max-width: 550px) {
+    display: none;
+  }
+}
+
+.headerDivMobile {
+  display: none;
+
+  @media (max-width: 550px) {
+    display: block;
+  }
+}
+
+.menuIcon {
+  display: none;
+
+  @media (max-width: 550px) {
+    display: block;
+  }
+}
+
+.filterBtn {
+  border: 1px solid var(--stroke-a);
+  background-color: var(--bg-a);
+  max-width: 100px;
+
+  svg {
+    path {
+      fill: var(--stroke-d);
+    }
+  }
+
+  span {
+    color: var(--font-a) !important;
+  }
+}
+
+.filterBtnActive {
+  border: 1px solid var(--stroke-f);
+  background-color: var(--bg-a);
+  max-width: 110px;
+
+  svg {
+    path {
+      fill: var(--stroke-f);
+    }
+  }
+  span {
+    color: var(--font-d) !important;
+  }
+}

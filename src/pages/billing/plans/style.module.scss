@@ -1,0 +1,193 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.planPeriod {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .packages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--bg-d);
+    border-radius: 20px;
+
+    .btn {
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background-color: var(--font-b);
+      color: var(--bg-d);
+      transition: all 0.5s ease-in;
+
+      @include font15;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .btnColor {
+      background-color: var(--bg-d);
+      color: var(--font-b);
+      transition: all 0.5s ease-in;
+    }
+  }
+
+  .cancelBtn {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    color: var(--stroke-b);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.planWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--stroke-a);
+    background: var(--cstm-bg-b);
+
+    .cardTitle {
+      @include font24;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: var(--pink);
+      margin-bottom: 5px;
+    }
+
+    .cardTitleColor2 {
+      color: var(--sky);
+    }
+
+    span {
+      @include font18;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: var(--font-e);
+    }
+
+    .pricing {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h2 {
+        @include font28;
+        font-weight: 700;
+        line-height: 41px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--font-a);
+      }
+
+      span {
+        @include font18;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--font-a);
+      }
+
+      hr {
+        margin: 10px 10px;
+        height: 2px;
+        background-color: var(--stroke-a);
+        border: 0px solid var(--bg-j);
+      }
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h5 {
+        @include font15;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--font-e);
+      }
+
+      p {
+        @include font13;
+        font-weight: 300;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--font-e);
+      }
+    }
+
+    .submit {
+      margin: 10px 0;
+
+      .btn {
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 100%;
+      }
+
+      .btn2 {
+        background-color: var(--sky);
+      }
+
+      .btn1 {
+        background-color: var(--pink);
+      }
+
+      .btnActive {
+        background-color: var(--bg-d);
+        color: var(--font-b);
+      }
+
+      .title {
+        @include font13;
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: var(--font-b);
+      }
+    }
+  }
+}
+
+.extra {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 15px;
+
+  @include font13;
+  font-weight: 300;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--stroke-b);
+  text-decoration: underline;
+}

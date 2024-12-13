@@ -1,0 +1,73 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainHeader {
+  .grid {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    justify-content: space-between;
+    gap: 10px;
+
+    .datePicker {
+      max-width: 100%;
+      width: 100%;
+
+      @media (max-width: $sm) {
+        max-width: 100%;
+        margin-right: 0px;
+      }
+    }
+
+    .statusBar {
+      min-width: 215px;
+      width: max-content;
+
+      @media (max-width: $sm) {
+        max-width: 100%;
+        margin-right: 0px;
+      }
+    }
+
+    .resetDiv {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      justify-content: flex-end;
+
+      img {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        padding: 0px !important;
+      }
+
+      button {
+        max-width: 120px;
+      }
+
+      .reset {
+        border: 1px solid var(--stroke-b);
+        background-color: var(--bg-j);
+
+        span {
+          color: var(--stroke-b);
+        }
+      }
+    }
+  }
+}
+
+.dynamicClass {
+  min-height: 41px !important;
+}
+
+.zDynamicState5 {
+  z-index: 500 !important;
+}
+
+.zDynamicState4 {
+  z-index: 400 !important;
+}

@@ -1,0 +1,108 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.activityWrapper {
+  margin-top: 10px;
+  height: 80vh;
+  overflow: auto;
+
+  .dayText {
+    color: var(--stroke-b);
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+    /* Heading 2 */
+
+    @include font24;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .activitiesSection {
+    padding: 10px 10px;
+  }
+
+  .activitiesInner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-x: scroll;
+
+    .activities {
+      position: relative;
+      align-items: center;
+      display: flex;
+      gap: 10px;
+
+      .greyLine {
+        position: absolute;
+        border-left: 1px solid var(--stroke-a);
+        height: 15px;
+        bottom: -15px;
+        left: 14px;
+      }
+
+      .line {
+        color: var(--font-c);
+        /* Body Font */
+
+        @include font13;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      span {
+        color: var(--Placeholder, var(--font-e));
+        font-feature-settings:
+          'cv11' on,
+          'cv01' on,
+          'ss01' on;
+        /* Small Font */
+
+        @include font11;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.profilePic {
+  width: 24px;
+  height: 24px;
+  border-radius: 80%;
+}
+
+.activityBy {
+  border-radius: 80%;
+  background: var(--text-color3-hover);
+  width: 24px;
+  height: 24px;
+  color: var(--bg-a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activityContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  margin: 2px 0;
+}
+
+.noDataClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 265px);
+}
+
+.activity {
+  overflow-y: auto;
+}

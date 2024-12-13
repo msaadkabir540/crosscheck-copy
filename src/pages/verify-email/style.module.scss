@@ -1,0 +1,9 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  @include font40;
+  text-align: center;
+  margin-top: 100px;
+}

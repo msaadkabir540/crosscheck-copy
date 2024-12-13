@@ -1,0 +1,84 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.widthAdjuster {
+  width: calc(100% - 150px) !important;
+}
+
+.frame {
+  margin-top: 10px;
+  width: 100%;
+  .divo {
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-color: var(--stroke-a);
+    display: flex;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+    position: relative;
+  }
+  .divWrapper {
+    align-items: center;
+    border-color: var(--stroke-a);
+    border-right-style: solid;
+    border-right-width: 2px;
+    display: flex;
+    padding: 10px 0px;
+    position: relative;
+    width: 150px;
+  }
+  .divWrapperInner {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 150px);
+  }
+  .textWrapper {
+    @include font13;
+    color: var(--font-a);
+    font-weight: 600;
+    position: relative;
+    width: fit-content;
+  }
+  .divWrapper2 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    position: relative;
+    width: 150px;
+  }
+  .textWrapper2 {
+    @include font13;
+    color: var(--font-a);
+    font-weight: 400;
+    position: relative;
+    width: fit-content;
+  }
+  .div3 {
+    align-items: center;
+    border-color: var(--stroke-a);
+    border-top-style: solid;
+    border-top-width: 2px;
+    display: flex;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+    position: relative;
+  }
+  .div2 {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+    position: relative;
+  }
+}
+
+.loader {
+  height: 10vh !important;
+}
+
+.multiColorProgressBar {
+  width: 100%;
+}

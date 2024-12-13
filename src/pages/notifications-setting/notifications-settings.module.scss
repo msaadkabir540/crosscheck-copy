@@ -1,0 +1,57 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.topText {
+  @include font13;
+  color: var(--bg-i);
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  span {
+    color: var(--stroke-b);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.tableWrapper {
+  margin-top: 10px;
+  max-height: calc(100vh - 183px);
+  overflow: auto;
+}
+
+.btnDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px;
+}
+
+.btn2 {
+  //   max-width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--stroke-b);
+  background-color: var(--font-b);
+}
+
+.btnText {
+  color: var(--stroke-b) !important;
+}
+
+.modalClass {
+  max-width: 375px !important;
+  padding: 20px !important;
+
+  svg {
+    height: 108px !important;
+    width: 111px !important;
+  }
+}
+
+.btnDivClass {
+  flex-direction: row !important;
+}

@@ -1,0 +1,47 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main_container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+
+  svg {
+    margin-top: 2px !important;
+  }
+
+  @media (max-width: 550px) {
+    display: none;
+  }
+}
+
+.filter_chip_sortby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  span {
+    color: var(--font-a);
+    @include font13;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+.container_custom_range_parent {
+  position: relative;
+  .container_custom_range {
+    position: absolute;
+    left: -250px;
+    bottom: -8px;
+    & > div {
+      & > div {
+        width: 210px;
+      }
+    }
+  }
+}

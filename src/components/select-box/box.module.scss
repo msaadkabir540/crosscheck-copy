@@ -1,0 +1,193 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.colrBg {
+  background-color: var(--red) !important;
+}
+
+.wraper {
+  width: 100%;
+
+  .lbl {
+    font-weight: 500;
+    @include font13;
+    color: var(--font-a);
+    line-height: 27px;
+    margin-left: 7px;
+    margin-bottom: 5px !important;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    p {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--red);
+    }
+  }
+
+  .selectClass {
+    position: relative;
+    cursor: pointer;
+
+    svg {
+      fill: var(--stroke-e);
+      stroke: var(--stroke-e);
+    }
+  }
+
+  .selectBox {
+    width: 100%;
+    position: relative;
+    border-radius: 6px;
+    height: fit-content;
+    cursor: pointer;
+  }
+
+  .displayValueOnly {
+    padding: 10px 5px;
+    color: var(--font-a);
+    @include font15;
+    font-weight: 400;
+  }
+}
+
+.errorMessage {
+  display: block;
+  @include font13;
+  color: var(--red) !important;
+  font-weight: 300 !important;
+  margin-top: 5px !important;
+}
+
+input {
+  color: var(--stroke-b) !important;
+  height: 100%;
+
+  &:focus {
+    border: 1px solid var(--stroke-d);
+  }
+
+  &:active {
+    border: 1px solid var(--stroke-d);
+  }
+}
+
+.css-1hb7zxy-IndicatorsContainer {
+  align-items: flex-start !important;
+  margin-top: 10px;
+}
+
+.tooltipText {
+  font-weight: 400;
+  @include font13;
+  color: var(--font-a);
+  text-align: center;
+}
+
+.tooltipChild {
+  width: 100%;
+  height: 100%;
+}
+
+.tooltip {
+  background: var(--bg-a);
+  z-index: 9998;
+  width: fit-content;
+  max-width: 100%;
+  position: absolute;
+  top: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--stroke-a);
+  word-wrap: break-word;
+  box-shadow: 0px 5px 20px var(--bg-shadow);
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 19px;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border: 10px solid var(--bg-j);
+    border-bottom-color: var(--stroke-a);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    color: var(--red);
+    position: absolute;
+    left: 20px;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border: 9px solid var(--bg-j);
+    border-bottom-color: var(--stroke-b);
+  }
+}
+
+.tagClass {
+  @include font13;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 150px;
+}
+
+input[type='checkbox']:checked::before {
+  &:focus {
+    border: 1px solid var(--stroke-d);
+  }
+
+  &:active {
+    border: 1px solid var(--stroke-d);
+  }
+
+  content: '\2714';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--icon);
+  height: 17px;
+  width: 17px;
+  line-height: 1;
+  background-color: var(--stroke-b);
+}
+
+.formatOptionLabelDiv {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 32px;
+  @include font13;
+  font-weight: 500;
+}
+
+.formatOptionLabelInput {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  background-color: var(--bg-j);
+  border: 1px solid var(--stroke-b);
+  border-radius: 4px;
+  outline: 1px solid var(--bg-j);
+  cursor: pointer;
+  position: relative;
+}
+
+.disabled {
+  background-color: var(--light-red);
+}

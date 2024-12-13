@@ -1,0 +1,92 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainHeader {
+  .grid {
+    @media (max-width: 490px) {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    flex-wrap: wrap;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    justify-content: space-between;
+
+    .datePicker {
+      min-width: 230px !important;
+      width: max-content;
+
+      @media (max-width: $sm) {
+        max-width: 100%;
+        margin-right: 0px;
+      }
+
+      @media (max-width: 490px) {
+        width: 100%;
+      }
+    }
+
+    .statusBar {
+      min-width: 230px !important;
+      width: max-content;
+
+      @media (max-width: $sm) {
+        max-width: 100%;
+        margin-right: 0px;
+      }
+
+      @media (max-width: 490px) {
+        width: 100%;
+      }
+    }
+
+    .resetDiv {
+      @media (max-width: 490px) {
+        justify-content: end;
+        width: 30%;
+      }
+
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      justify-content: flex-end;
+
+      img {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        padding: 0px !important;
+      }
+
+      button {
+        max-width: 120px;
+      }
+
+      .reset {
+        border: 1px solid var(--stroke-b);
+        background-color: var(--bg-j);
+
+        span {
+          color: var(--font-c);
+        }
+      }
+    }
+  }
+}
+
+.dynamicClass {
+  min-height: 41px !important;
+}
+
+.zDynamicState4 {
+  z-index: 400 !important;
+}
+
+.zDynamicState45 {
+  z-index: 401 !important;
+}

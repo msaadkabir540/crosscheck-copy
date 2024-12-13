@@ -1,0 +1,123 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.modalChild {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.tabsDiv {
+  margin-top: 10px;
+}
+
+.strokeBtn {
+  border: 1px solid var(--bg-g) !important;
+  background-color: var(--bg-j) !important;
+  max-width: 100% !important;
+
+  span {
+    color: var(--light-red) !important;
+  }
+}
+
+.btnDiv {
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  svg {
+    cursor: pointer !important;
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.innerBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  svg {
+    height: 24px !important;
+    width: 24px !important;
+  }
+
+  img {
+    height: 24px !important;
+    width: 24px !important;
+  }
+}
+
+.resizableTable {
+  position: absolute;
+  // flex: 1 1 auto !important;
+  // width: 90% !important;
+  // height: 70vh !important;
+  overflow: scroll !important;
+}
+
+.tab_title_custom {
+  min-width: fit-content !important;
+}
+
+.current_site_url_container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .current_site_url_container_heading {
+    color: var(--font-a);
+    @include font13;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    min-width: fit-content;
+    padding-top: 4px;
+  }
+
+  .current_site_url_container_content {
+    color: var(--font-a);
+    @include font13;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.scrollRightButton {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: var(--table-row) !important;
+  filter: drop-shadow(0px 0px 5px var(--bg-shadow));
+  cursor: pointer !important;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  visibility: hidden;
+  z-index: 9 !important;
+  @media screen and (max-width: 410px) {
+    visibility: visible;
+  }
+}
+.relative {
+  position: relative !important;
+}
+.adjustable_width {
+  width: calc(100% - 116px) !important;
+  @media screen and (max-width: $sm) {
+    width: calc(100% - 120px) !important;
+  }
+}

@@ -1,0 +1,94 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  padding: var(--Modal-Padding, 20px);
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: var(--Modal-Padding, 10px);
+  border-radius: 10px;
+  border: 1px solid var(--stroke-a);
+  background: var(--bg-a);
+}
+
+.heading {
+  color: var(--font-c);
+
+  /* Desktop/Subtitle 2 */
+
+  @include font18;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.boxDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .miniBox {
+    cursor: pointer;
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    height: 100%; // Make all miniBoxes equal in height
+    background-color: var(--bg-j); // Set the background color for miniBoxes
+
+    span {
+      color: var(--font-a);
+
+      @include font11;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &:hover {
+      & div {
+        opacity: 1;
+        transition-delay: 0.3s;
+      }
+    }
+  }
+}
+
+.tooltip {
+  transition: 0s;
+  opacity: 0;
+  position: absolute;
+  border-radius: 10px;
+  background: var(--bg-i);
+  border: 1px solid var(--bg-i);
+  box-shadow: 0px 0px 10px var(--bg-shadow);
+  padding: 6px 12px;
+  width: max-content;
+  bottom: 38px;
+  z-index: 200;
+  font-weight: 400;
+  @include font11;
+  color: var(--font-b) !important;
+  text-transform: capitalize;
+
+  &::before {
+    content: '';
+    bottom: -15px;
+    right: 25px;
+    transform: rotate(180deg);
+    z-index: 2010;
+    clip-path: polygon(50% 61%, 0% 100%, 100% 100%);
+    box-shadow: 0px 0px 10px var(--bg-shadow);
+    background: var(--bg-i);
+    height: 16px;
+    width: 14px;
+
+    position: absolute;
+  }
+}

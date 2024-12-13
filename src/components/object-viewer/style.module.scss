@@ -1,0 +1,8 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.fontSize {
+  @include font13;
+  overflow: hidden !important;
+}

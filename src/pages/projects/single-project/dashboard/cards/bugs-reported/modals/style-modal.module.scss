@@ -1,0 +1,55 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.modalClass {
+  max-width: 500px;
+  padding: 20px !important;
+  overflow-y: visible !important;
+}
+
+.crossImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  .modalTitle {
+    font-weight: 700;
+    @include font24;
+    color: var(--font-c);
+  }
+}
+
+.main {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.innerWrapper {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.divWrapperInner {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+
+  .btnClass {
+    background-color: var(--bg-a);
+    border: 1px solid var(--stroke-b);
+  }
+
+  .btnTitle {
+    color: var(--font-c) !important;
+  }
+}
+.icon {
+  path {
+    fill: var(--stroke-e);
+  }
+}

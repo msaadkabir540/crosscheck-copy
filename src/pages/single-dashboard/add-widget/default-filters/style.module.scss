@@ -1,0 +1,50 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.subHeader {
+  .backIcon {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--stroke-b);
+    @include font13;
+  }
+}
+
+.mainWrapper {
+  min-height: 53vh; //   border: solid red 1px
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin-top: 10px;
+    max-height: 53vh; //   border: solid red 1px
+    @include gridTwo;
+    align-items: flex-start;
+    gap: 10px;
+    overflow-y: auto;
+  }
+}
+
+.btnDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+
+  label {
+    padding-left: 24px !important;
+  }
+
+  .btn {
+    border: 1px solid var(--stroke-b);
+    background-color: var(--bg-j);
+
+    span {
+      color: var(--stroke-b);
+    }
+  }
+}

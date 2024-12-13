@@ -1,0 +1,73 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.multicolorBar {
+  width: 200px;
+
+  .bars {
+    display: flex;
+    gap: 2px;
+
+    .bar {
+      height: 10px;
+      position: relative;
+
+      &:hover {
+        & > div {
+          opacity: 1;
+          transition-delay: 0.3s;
+        }
+      }
+
+      .tooltip {
+        transition: 0s;
+        opacity: 0;
+        position: absolute;
+        background: var(--bg-a);
+        box-shadow: 0px 0px 10px var(--bg-shadow);
+        border-radius: 2px 2px 2px 0px;
+        padding: 3px 9px;
+        width: max-content;
+        bottom: 28px;
+        right: -40px;
+
+        z-index: 200;
+
+        p {
+          font-weight: 400;
+          @include font13;
+          color: var(--font-a);
+          text-transform: capitalize;
+        }
+
+        &::before {
+          content: '';
+          bottom: -15px;
+          right: 50%;
+          transform: rotate(180deg);
+
+          z-index: 2010;
+
+          clip-path: polygon(50% 61%, 0% 100%, 100% 100%);
+          box-shadow: 0px 0px 10px var(--bg-shadow);
+          background: var(--bg-a);
+          height: 16px;
+          width: 14px;
+
+          position: absolute;
+        }
+      }
+
+      &:first-of-type {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      &:last-of-type {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+}

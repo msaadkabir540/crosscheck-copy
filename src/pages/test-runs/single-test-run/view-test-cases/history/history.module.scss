@@ -1,0 +1,141 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px 0px;
+  padding-bottom: 50px;
+
+  /* Corrected order */
+  ::-webkit-scrollbar {
+    width: 7px;
+    background: var(--bg-b);
+    height: 7px;
+    border-radius: 8px;
+  }
+
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-f);
+    border-radius: 8px;
+  }
+
+  /* Corrected order */
+  ::-webkit-scrollbar:vertical {
+    width: 7px;
+    background: var(--bg-b);
+    height: 7px;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .tableWidth {
+    max-width: 4600px;
+    overflow-y: auto;
+
+    /* Corrected order */
+    ::-webkit-scrollbar {
+      width: 7px;
+      background: var(--bg-b);
+      height: 7px;
+      border-radius: 8px;
+    }
+
+    /* Optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+      background: var(--bg-f);
+      border-radius: 8px;
+    }
+
+    /* Corrected order */
+    ::-webkit-scrollbar:vertical {
+      width: 7px;
+      background: var(--bg-b);
+      height: 7px;
+      border-radius: 8px;
+      display: block !important;
+    }
+  }
+}
+
+.th {
+  text-align: center !important;
+  font-weight: 600;
+  @include font13;
+  letter-spacing: 0.17px;
+  height: 60px;
+  color: var(--stroke-b);
+  background-color: var(--bg-a);
+
+  &:first-child {
+    text-align: left !important;
+    padding-left: 8px;
+
+    span {
+      text-align: left !important;
+      justify-content: flex-start !important;
+    }
+  }
+}
+
+.thead {
+  top: 0px;
+  position: sticky;
+  background-color: var(--bg-a) !important;
+  z-index: 4;
+}
+
+.tableRow {
+  box-shadow: var(--bg-j);
+  border-radius: 7px;
+
+  td {
+    font-weight: 400;
+    @include font13;
+    color: var(--font-a);
+    height: 36px;
+
+    &:first-child {
+      padding-left: 30px !important;
+      border-radius: 5px 0px 0px 5px;
+    }
+
+    &:last-child {
+      border-radius: 0px 5px 5px 0px;
+    }
+  }
+}
+
+.checkboxContainer {
+  display: inline !important;
+  top: -2px !important;
+  left: 5px !important;
+}
+
+.checkboxContainer1 {
+  display: inline !important;
+  top: -2px !important;
+  left: 5px;
+}
+
+.checkDiv {
+  background-color: var(--bg-a);
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,449 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 60px;
+  height: 100%;
+  border-radius: 7px;
+  background-color: var(--bg-d);
+
+  .logoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .imgDiv {
+      padding: 23px 0px 10px 0px;
+      display: flex;
+      justify-content: center;
+
+      .logo1 {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .workSpaceLogoDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-bottom: 60px;
+      border: 2px solid var(--stroke-b);
+      background-color: var(--table-row);
+      border-radius: 50%;
+      height: 40px;
+      cursor: pointer;
+      width: 40px;
+
+      .logo2 {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      span {
+        color: var(--stroke-b);
+      }
+
+      &:hover {
+        & .tooltip {
+          display: block;
+          opacity: 1;
+          transition-delay: 0.3s;
+        }
+      }
+    }
+  }
+
+  .routes {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 4px;
+    margin: 0px 11.5px;
+    padding: 10px;
+    position: relative;
+    margin-top: 20px !important;
+
+    img {
+      height: 24px !important;
+      width: 24px !important;
+    }
+
+    svg {
+      height: 24px !important;
+      width: 24px !important;
+    }
+
+    & div {
+      display: none;
+    }
+
+    &:hover {
+      & div {
+        display: block;
+        opacity: 1;
+        transition-delay: 0.3s;
+      }
+    }
+  }
+
+  .logoutDiv {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 4px;
+    margin: 20px 11.3px;
+    padding: 10px 10px 10px 0px;
+    position: relative;
+
+    &:hover {
+      & div {
+        opacity: 1;
+        display: block;
+        transition-delay: 0.3s;
+      }
+    }
+
+    .icon {
+      svg {
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
+
+.position {
+  position: absolute;
+  top: 80px;
+  width: 205px;
+  left: 70px;
+  background: var(--bg-c);
+  box-shadow: 0px 0px 10px var(--bg-shadow);
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 3001;
+
+  .userInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--stroke-a);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      & .tooltipWs {
+        display: block;
+        opacity: 1;
+        transition-delay: 0.3s;
+        top: 150px;
+      }
+    }
+
+    span {
+      color: var(--font-a);
+
+      @include font24;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .matchingWSname {
+      max-width: 120px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .noNameIcon {
+      height: 40px;
+      width: 40px;
+      min-width: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg-b);
+      color: var(--font-b);
+    }
+  }
+
+  .innerFlex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &:first-child {
+      margin-top: 0px;
+    }
+
+    p {
+      font-weight: 500;
+      @include font15;
+      color: var(--stroke-b);
+    }
+  }
+}
+
+.position2 {
+  position: absolute;
+  top: 230px;
+  min-width: 250px;
+  width: 100%;
+  left: 270px;
+  background: var(--bg-c);
+  box-shadow: 0px 0px 10px var(--bg-shadow);
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 3;
+
+  ::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .addWorkSpace {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--stroke-a);
+    cursor: pointer;
+    color: var(--stroke-b);
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    svg {
+      height: 24px;
+      width: 24px;
+      path {
+        fill: var(--stroke-b);
+      }
+    }
+  }
+
+  .userInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      & .tooltipWs {
+        display: block;
+        opacity: 1;
+        transition-delay: 0.3s;
+      }
+    }
+
+    .selectWS {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      width: 100%;
+
+      .selectWSImgDiv {
+        width: fit-content;
+      }
+    }
+
+    span {
+      color: var(--font-a);
+
+      @include font15;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      max-width: 120px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .nameLogo {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      min-width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg-d);
+      color: var(--font-b);
+    }
+
+    .userNameLogo {
+      height: 40px;
+      min-width: 40px;
+      width: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg-d);
+      color: var(--font-b);
+    }
+  }
+}
+
+.backdropDiv {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-j);
+  z-index: 2;
+}
+
+.projectsFlex {
+  display: flex;
+  height: 100%;
+}
+
+.tooltipWs {
+  transition: 0s;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  background: var(--bg-a);
+  box-shadow: 0px 0px 10px var(--bg-shadow);
+  border-radius: 10px;
+  padding: var(--Table-Row-Gap, 8px) 12px;
+  width: 100px;
+  word-wrap: break-word;
+  top: 7px;
+  right: -100px;
+  z-index: 500;
+
+  &::before {
+    content: '';
+    top: 3px;
+    left: -16px;
+    transform: rotate(-90deg);
+    z-index: 2010;
+    clip-path: polygon(50% 61%, 0% 100%, 100% 100%);
+    box-shadow: 0px 0px 10px var(--bg-shadow);
+    background: var(--bg-a);
+    height: 20px;
+    width: 14px;
+    position: absolute;
+  }
+
+  p {
+    font-weight: 400;
+    @include font13;
+    color: var(--stroke-b);
+    text-transform: capitalize;
+  }
+}
+
+.tooltip {
+  transition: 0s;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  background: var(--bg-a);
+  box-shadow: 0px 0px 10px var(--bg-shadow);
+  border-radius: 10px;
+  padding: var(--Table-Row-Gap, 8px) 12px;
+  width: max-content;
+  top: 5px;
+  left: 58px;
+  z-index: 500;
+
+  &::before {
+    content: '';
+    top: 3px;
+    left: -16px;
+    transform: rotate(-90deg);
+    z-index: 2010;
+    clip-path: polygon(50% 61%, 0% 100%, 100% 100%);
+    box-shadow: 0px 0px 10px var(--bg-shadow);
+    background: var(--bg-a);
+    height: 20px;
+    width: 14px;
+    position: absolute;
+  }
+
+  p {
+    font-weight: 400;
+    @include font13;
+    color: var(--stroke-b);
+    text-transform: capitalize;
+  }
+}
+
+.nameLogoCurrent {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-d);
+
+  span {
+    color: var(--font-b) !important;
+  }
+}
+
+.skeletonLoader {
+  width: 100%;
+  height: 40px;
+  background: var(--bg-gradient);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+// Define the animation for the skeleton loader
+@keyframes loading {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.line {
+  background-color: var(--bg-b);
+  height: 40px;
+  width: 1px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.border_with_width {
+  border: 1px solid var(--border);
+}
+.border_with_no_width {
+  border: 0px solid var(--border);
+}
+.bacground_color_active {
+  background: var(--active) !important;
+}

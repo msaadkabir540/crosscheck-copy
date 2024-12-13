@@ -1,0 +1,40 @@
+@import 'styles/_breakpoints.scss';
+
+.barIcon {
+  position: relative;
+}
+
+.flexBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.noMargin {
+  margin-bottom: 0;
+}
+
+.paddingOnHeader {
+  padding: 0px 20px 0px 0px;
+}
+
+.input {
+  width: 388px;
+  position: fixed;
+  right: 20px;
+  z-index: 2;
+  top: 18px;
+}
+.menuDiv {
+  display: block;
+  @media (max-width: $sm) {
+    display: none;
+  }
+}
+.mobileSearchDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}

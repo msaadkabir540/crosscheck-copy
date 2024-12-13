@@ -1,0 +1,44 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainDiv {
+  max-width: 320px !important;
+
+  .modalTitle {
+    font-weight: 500;
+    @include font15;
+    color: var(--stroke-b);
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .iconRefresh {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .p {
+    font-weight: 700;
+    @include font15;
+    color: var(--stroke-b);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .mainBtnDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  p {
+    font-weight: 600;
+    @include font15;
+    color: var(--stroke-b);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,122 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.inputComment {
+  width: 100%;
+  margin-right: 0px;
+  padding: 5px;
+
+  .attachmentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+
+    .file {
+      display: flex;
+      padding: 5px;
+      border-radius: 3px;
+      width: fit-content;
+      gap: 5px;
+      margin-top: 5px;
+      border: 1px solid var(--stroke-a);
+      // background: var(--Shadow-B, rgba(7, 25, 82, 0.1));
+
+      span {
+        @include font13;
+        font-style: normal;
+        font-weight: 400;
+        color: var(--font-a);
+      }
+      svg {
+        path {
+          stroke: var(--stroke-d) !important;
+        }
+      }
+    }
+  }
+
+  .commentInputContainer {
+    border: 1px solid var(--stroke-a);
+    border-radius: 5px;
+    width: 100%;
+
+    .commentInput {
+      display: flex;
+      align-items: center;
+      width: 100% !important;
+      // padding-top: 10px;
+      position: relative;
+      gap: 20px !important;
+
+      svg {
+        path {
+          stroke: var(--stroke-d) !important;
+        }
+      }
+      .attachment {
+        position: absolute;
+        z-index: 1;
+        left: 15px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+
+.sendBtn {
+  position: absolute;
+  right: -30px;
+  width: 24px;
+  border: 0px solid var(--bg-j);
+  background-color: var(--bg-j);
+
+  svg {
+    height: 24px;
+    width: 24px;
+    padding-bottom: 8px;
+    path {
+      stroke: var(--stroke-d) !important;
+    }
+  }
+}
+
+.nameField_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  border-bottom: 1px solid var(--stroke-a);
+  gap: 10px;
+
+  p {
+    @include font13;
+    font-weight: 600;
+    color: var(--font-a);
+    margin-left: 13px;
+  }
+
+  input {
+    border: var(--bg-j) !important;
+    width: 100%;
+  }
+}
+.commentField {
+  width: 100%;
+  border: 0px solid var(--bg-j);
+
+  input {
+    width: 100%;
+    padding-left: 40px;
+    border: 0px solid var(--bg-j);
+
+    &:focus {
+      border: var(--bg-j) !important;
+    }
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

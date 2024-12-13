@@ -1,0 +1,161 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  min-width: 225px;
+  min-height: 168px;
+  display: inline-flex;
+  padding: var(--numbers-modal-corner, 10px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--numbers-modal-corner, 10px);
+  border-radius: var(--numbers-modal-corner, 10px);
+  border: 1px solid var(--stroke-a);
+  background: var(--bg-a) !important;
+
+  .profileDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--numbers-modal-corner, 10px);
+    justify-content: space-between;
+
+    img {
+      border-radius: 50%;
+    }
+
+    .statusOnline {
+      padding: 1px 3px;
+      border-radius: 3px;
+      border: 1px solid var(--green);
+      color: var(--green);
+
+      @include font13;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .statusOffline {
+      padding: 1px 3px;
+      border-radius: 3px;
+      border: 1px solid var(--pass-close, var(--font-e));
+      color: var(--pass-close, var(--font-e));
+
+      @include font13;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .title {
+    color: var(--font-a);
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+    /* Heading 2 */
+
+    @include font24;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      color: var(--font-a);
+
+      @include font13;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .copyText {
+      position: absolute;
+      right: 0;
+      margin-right: -10px;
+      margin-top: -40px;
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .inner {
+    border-radius: 0 3px 3px 0;
+    border: 1px solid var(--stroke-a);
+    background: var(--bg-a);
+    display: flex;
+    padding: var(--numbers-modal-corner, 10px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+
+    .title {
+      color: var(--font-a);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      @include font11;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .dateScss {
+      color: var(--font-a);
+
+      @include font11;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .subTitle {
+      color: var(--font-a);
+
+      @include font13;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .progressBar {
+      width: 100% !important;
+    }
+
+    .imgSection {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        color: var(--font-a);
+        font-feature-settings:
+          'cv11' on,
+          'cv01' on,
+          'ss01' on;
+        /* Small Font */
+
+        @include font11;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}

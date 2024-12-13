@@ -1,0 +1,157 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.captureNav_RightChild {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy_url_button {
+  display: flex;
+  height: 35px;
+  min-width: 100px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  // gap: 10px;
+  border: 1px solid var(--bg-d);
+  background-color: var(--bg-j) !important;
+  border-radius: 5px;
+
+  &:hover {
+    color: var(--font-b) !important;
+
+    span {
+      color: var(--bg-a) !important;
+    }
+  }
+
+  span {
+    color: var(--bg-d) !important;
+  }
+}
+
+.moreMenu {
+  position: relative;
+}
+
+.modalDiv {
+  z-index: 999;
+  top: -200px;
+  right: 0px;
+  position: absolute;
+  background-color: var(--bg-a);
+  border: 1px solid var(--stroke-a);
+  border-radius: 5px;
+
+  width: 160px;
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+
+  .flexImport {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      @include font13;
+      color: var(--font-a);
+    }
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  background-color: var(--bg-j);
+}
+
+.strokeBtn {
+  display: flex;
+  height: 35px;
+  min-width: 100px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid var(--light-red) !important;
+  background-color: var(--bg-j) !important;
+
+  &:hover {
+    background-color: var(--light-red) !important;
+    color: var(--font-b) !important;
+
+    span {
+      color: var(--bg-a) !important;
+    }
+  }
+
+  span {
+    color: var(--light-red) !important;
+  }
+}
+
+.more_icon {
+  cursor: pointer;
+
+  svg {
+    path {
+      stroke: var(--stroke-d);
+    }
+  }
+}
+
+.icon {
+  path {
+    stroke: var(--stroke-d);
+  }
+}
+
+.delIcon {
+  path {
+    stroke: var(--red);
+  }
+}
+
+.disabled {
+  opacity: 0.5 !important;
+  cursor: no-drop !important;
+}
+
+.DisableFlexImport {
+  opacity: 0.5 !important;
+  cursor: no-drop !important;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  p {
+    @include font13;
+    color: var(--font-a);
+  }
+
+  svg {
+    height: 16px;
+    width: 16px;
+  }
+}
+.red_color {
+  color: var(--red) !important;
+}
+.create_task_icon_style {
+  svg {
+    path {
+      stroke: var(--stroke-d) !important;
+    }
+  }
+}

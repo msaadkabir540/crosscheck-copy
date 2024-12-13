@@ -1,0 +1,77 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.editor {
+  border: 1px solid var(--stroke-a);
+  border-radius: 10px;
+  margin-top: calc(5px + (7 - 5) * (100vw - 280px) / (2560 - 280));
+  min-height: 111px;
+}
+
+.edit {
+  border: var(--bg-j) !important;
+  background-color: var(--bg-j);
+  border-bottom: 1px solid var(--stroke-a) !important;
+  margin-bottom: 0px !important;
+  justify-content: space-between !important;
+}
+
+.editorStyle {
+  margin: 0px !important;
+  font-weight: 400 !important;
+  @include font13;
+  color: var(--font-a) !important;
+  padding: 0px 10px;
+  resize: both;
+  overflow: auto;
+
+  &::placeholder {
+    color: var(--red) !important;
+  }
+}
+
+.borderLess {
+  border: var(--bg-j) !important;
+  box-shadow: var(--bg-j) !important;
+  padding: 0px !important;
+  background-color: var(--bg-j) !important;
+
+  img {
+    height: 24px !important;
+    width: 24px !important;
+    filter: invert(var(--invert)) !important;
+  }
+}
+
+.linkDecorator {
+  left: unset !important;
+  right: -15px !important;
+  border: var(--bg-j) !important;
+  background-color: var(--bg-j) !important;
+
+  &:hover {
+    border: var(--bg-j) !important;
+    box-shadow: var(--bg-j) !important;
+  }
+
+  img {
+    filter: invert(var(--invert)) !important;
+  }
+}
+
+.label {
+  color: var(--font-a);
+  @include font13;
+  font-weight: 500;
+  margin-left: 7px;
+}
+
+.whiteStroke {
+  stroke: var(--font-a);
+}
+
+.errorMessage {
+  color: var(--light-red);
+  @include font13;
+}

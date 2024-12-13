@@ -1,0 +1,141 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.welcomeLoaderContainer {
+  display: flex !important;
+  padding: 0px;
+  align-items: center;
+  width: 100%;
+}
+
+.welcomeDivLoader {
+  flex: 1;
+}
+.welcomeDivLoaderBtn {
+  display: none;
+}
+.leftLoaderContainer {
+  display: flex;
+  height: 100%;
+  width: 65%;
+  padding: 0px;
+  border-radius: var(--numbers-modal-corner, 10px);
+  div {
+    height: 100%;
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+
+.rightLoaderContainer {
+  display: flex;
+  height: 100%;
+  width: 35%;
+  padding: 0px;
+  border-radius: var(--numbers-modal-corner, 10px);
+  div {
+    height: 100%;
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+
+.bottomLoaderContainer {
+  display: flex;
+  height: 100% !important;
+  width: 100%;
+  padding: 0px;
+  border-radius: var(--numbers-modal-corner, 10px);
+  div {
+    height: 100% !important;
+    width: 100% !important;
+    min-height: 350px !important;
+    min-width: 100% !important;
+  }
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.upperDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  .boxWidth {
+    width: 292px !important;
+    @media (max-width: 450px) {
+      width: 100% !important;
+    }
+  }
+}
+.middleDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 326px;
+  width: 100%;
+  @media (max-width: $md) {
+    height: 100%;
+    align-items: start;
+  }
+  @media (max-width: $sm) {
+    flex-direction: column;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 65%;
+
+    @media (max-width: $md) {
+      width: 50%;
+      height: 100%;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+
+    .valueBoxDiv {
+      @media (max-width: $md) {
+        width: 100%;
+        flex-direction: row;
+      }
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
+      width: 30%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 10px;
+      .valueBoxClass {
+        @media (max-width: 1140px) {
+          height: 200px;
+        }
+        width: 100%;
+      }
+      .valuePaletteClass {
+        height: 200px;
+      }
+    }
+  }
+  .right {
+    width: 35%;
+    height: 326px;
+    @media (max-width: $md) {
+      width: 50%;
+      display: flex;
+    }
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+  }
+}

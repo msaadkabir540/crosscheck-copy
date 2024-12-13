@@ -1,0 +1,27 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+
+  span {
+    color: var(--bg-d);
+    text-align: center;
+
+    @include font28;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  button {
+    max-width: 100% !important;
+    margin-top: 20px;
+    background-color: var(--bg-d) !important;
+  }
+}

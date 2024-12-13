@@ -1,0 +1,10 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.fill1 {
+  fill: var(--icon) !important;
+}
+.fillWhite {
+  stroke: var(--font-b);
+}

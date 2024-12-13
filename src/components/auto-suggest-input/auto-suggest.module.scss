@@ -1,0 +1,117 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+.formWrapper {
+  width: 100%;
+}
+.main_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.auto_suggest_container {
+  width: 100%;
+  min-height: 35px;
+  position: relative;
+  border: 1px solid var(--stroke-a);
+  padding: 4.5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .input_and_selected {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    padding: 4px;
+  }
+
+  .suggestions {
+    position: absolute;
+    top: 100%;
+    background-color: var(--bg-f);
+    width: 100%;
+    border: 1px solid var(--stroke-a);
+    @include font13;
+    font-weight: 300;
+    color: var(--stroke-a);
+
+    .suggested_name {
+      color: var(--font-a);
+      padding: 5px 10px !important ;
+
+      &:hover {
+        background-color: var(--stroke-a);
+        cursor: pointer;
+      }
+    }
+  }
+
+  input {
+    width: 100% !important;
+    border: 0px solid var(--bg-j);
+
+    &:focus {
+      border: var(--bg-j) !important;
+    }
+  }
+}
+.inputDiv {
+  width: auto;
+  flex: auto;
+}
+
+.selected_user {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--bg-b);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-bottom: 4px;
+  @include font13;
+  font-weight: 300;
+
+  .icon_container {
+    cursor: pointer !important;
+
+    svg {
+      margin-top: 2px;
+      cursor: pointer;
+    }
+  }
+}
+
+.selected_user button {
+  margin-left: 8px;
+}
+
+.share_button {
+  display: flex;
+  height: 35px;
+  min-width: 100px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  // gap: 10px;
+  border: 1px solid var(--bg-d);
+  background-color: var(--bg-d) !important;
+  border-radius: 5px;
+  span {
+    @include font13;
+    color: var(--font-b) !important;
+  }
+  &:hover {
+    background-color: var(--bg-d) !important;
+    color: var(--font-b) !important;
+
+    span {
+      color: var(--bg-a) !important;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainDiv {
+  max-width: 420px !important;
+
+  .flex1 {
+    .p {
+      font-weight: 500;
+      @include font18;
+      color: var(--stroke-b);
+      margin-bottom: 10px;
+    }
+
+    .label {
+      margin-top: 20px;
+    }
+
+    input {
+      max-width: 100% !important;
+    }
+  }
+
+  .mainBtnDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 20px;
+
+    p {
+      font-weight: 600;
+      @include font15;
+      color: var(--stroke-b);
+      cursor: pointer;
+      max-width: 70px;
+      width: 100%;
+      border: 1px solid var(--stroke-b);
+      border-radius: 5px;
+      height: 35px;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.tabsContainer {
+  width: 100%;
+}
+
+.tagDiv {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  overflow-x: scroll;
+
+  /* Hide scrollbar for webkit-based browsers (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .innerDiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+}
+
+.tag {
+  width: auto;
+  height: 25px;
+  display: flex;
+  padding: 5px;
+  align-items: flex-start;
+  gap: 5px;
+  border-radius: 5px;
+  background: var(--bg-b);
+
+  .tagText {
+    color: var(--font-a);
+    text-align: right;
+
+    @include font13;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
+
+.withLine {
+  border-right: 1px solid var(--stroke-a);
+  height: 25px;
+}
+
+.tag.active {
+  box-shadow: 2px 2px 2px 0px var(--bg-shadow);
+}
+
+.tag.multiActive {
+  .tagText {
+    color: var(--font-b);
+  }
+
+  background: var(--bg-e);
+
+  box-shadow: 2px 2px 2px 0px var(--bg-shadow);
+}

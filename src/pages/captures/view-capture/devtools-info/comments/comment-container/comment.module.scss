@@ -1,0 +1,223 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    .span {
+      color: var(--font-a);
+      @include font13;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    .dpName {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .profilePicture {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        border-radius: 100%;
+        margin-right: 5px;
+      }
+    }
+
+    .alternative_name {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg-d);
+      color: var(--stroke-a);
+      margin-right: 10px;
+      @include font13;
+      padding: 10px;
+    }
+
+    .iconDate {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      @include font13;
+      font-weight: 300;
+      color: var(--font-a);
+      cursor: pointer;
+
+      .date {
+        color: var(--font-e);
+      }
+
+      .editDeleteIcon {
+        gap: 10px;
+        display: none;
+        transition: display 0.5 ease-in-out;
+        svg {
+          height: 18px;
+          width: 18px;
+          path {
+            stroke: var(--stroke-d) !important;
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    color: var(--font-a);
+
+    @include font13;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    a {
+      color: var(--font-a) !important;
+    }
+  }
+
+  .editForm {
+    display: flex;
+    flex-direction: column;
+
+    .attachmentContainer {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      width: 100%;
+      overflow-x: hidden;
+
+      .file {
+        display: flex;
+        padding: 5px;
+        gap: 5px;
+        border-radius: 3px;
+        align-items: center;
+        flex-wrap: wrap;
+        cursor: pointer;
+
+        .file:not(:empty) {
+          border: 1px solid var(--border);
+        }
+
+        svg {
+          height: 16px;
+          width: 16px;
+          path {
+            stroke: var(--stroke-d) !important;
+          }
+        }
+
+        a {
+          @include font13;
+          font-style: normal;
+          font-weight: 400;
+          color: var(--font-a);
+        }
+      }
+    }
+
+    .editField {
+      border: 1px solid var(--bg-j) !important;
+      input {
+        background-color: var(--bg-j);
+        border: 0px solid var(--bg-j);
+        border-radius: 0px;
+        padding-bottom: 2px;
+        padding-top: 0px;
+        color: var(--font-a) !important;
+      }
+    }
+
+    .editModeFooter {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      position: relative;
+
+      .btn {
+        border: 1px solid var(--stroke-b);
+        background-color: var(--bg-j);
+        max-width: 100px;
+
+        span {
+          color: var(--stroke-b) !important;
+        }
+      }
+
+      .attachIcon {
+        cursor: pointer;
+
+        svg {
+          height: 24px;
+          width: 24px;
+        }
+
+        margin-bottom: 5px;
+      }
+
+      .editModebtns {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .attachmentContainer1 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding-bottom: 5px;
+
+      .attachmentFile1 {
+        display: flex;
+        padding: 5px;
+        margin: 0px;
+        gap: 5px;
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        align-items: center;
+        width: fit-content;
+        cursor: pointer;
+        svg {
+          path {
+            stroke: var(--stroke-d) !important;
+          }
+        }
+        .a {
+          @include font13;
+          font-style: normal;
+          font-weight: 400;
+          color: var(--font-a);
+        }
+      }
+    }
+  }
+}
+
+.main:hover .header .iconDate .editDeleteIcon {
+  display: flex;
+}

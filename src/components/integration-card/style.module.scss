@@ -1,0 +1,95 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  border: 1px solid var(--stroke-a);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  .iconBox {
+    width: max-content;
+  }
+
+  .textBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h4 {
+      color: var(--font-a);
+      @include font15;
+    }
+
+    h3 {
+      color: var(--font-a);
+      font-feature-settings:
+        'clig' off,
+        'liga' off;
+
+      /* Desktop/Headings/H3 */
+
+      @include font15;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    .description {
+      display: flex;
+      // justify-content: space-between;
+      //   align-items: center;
+      gap: 5px;
+
+      span {
+        color: var(--font-a);
+
+        /* Desktop/Subtitle 1 */
+
+        @include font13;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+
+      .tooltip {
+        position: relative;
+
+        .tooltipText {
+          opacity: 0;
+          position: absolute;
+          right: -150px;
+          bottom: 25px;
+          width: max-content;
+          background-color: var(--bg-i);
+          color: var(--font-b);
+          padding: 5px 10px 15px;
+          border-radius: 5px;
+          clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% calc(100% - 10px),
+            calc(50% + 10px) calc(100% - 10px),
+            50% 100%,
+            calc(50% - 10px) calc(100% - 10px),
+            0% calc(100% - 10px)
+          );
+          transition: all 0.3s ease;
+        }
+
+        &:hover .tooltipText {
+          opacity: 1;
+          transition: all 0.3s ease-in;
+        }
+      }
+    }
+  }
+
+  .buttonBox {
+    width: max-content;
+  }
+}

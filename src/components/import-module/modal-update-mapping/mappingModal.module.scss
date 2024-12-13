@@ -1,0 +1,145 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px !important;
+  min-height: 392px !important;
+  height: fit-content !important;
+  gap: 20px;
+  justify-content: space-between;
+
+  .header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .span {
+      color: var(--stroke-b);
+      @include font24;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    .crossIcon {
+      display: inline;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .mappingFieldsContainer {
+    max-height: 600px;
+    min-height: 250px;
+
+    overflow-y: scroll !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .headings {
+      display: flex;
+      gap: 20px;
+      .headingControl {
+        width: 50%;
+      }
+
+      .span1 {
+        color: var(--font-a);
+        @include font13;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      .hollowSpace {
+        min-width: 20px;
+      }
+
+      .headingControl2 {
+        width: 50%;
+      }
+    }
+
+    .mappingField {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      z-index: 5;
+      width: 100%;
+
+      .textFieldControl {
+        @include font13;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        width: 50% !important;
+      }
+      .arrowIcon {
+        z-index: 4;
+      }
+
+      .selectFieldControl {
+        width: 50%;
+
+        .dynamicWrapper {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+
+    .transparent {
+      min-width: 80px !important;
+      background-color: var(--bg-j) !important;
+      border: 1px solid var(--stroke-b) !important;
+
+      span {
+        color: var(--stroke-b) !important;
+      }
+    }
+    .saveBtn {
+      min-width: 80px !important;
+    }
+    .saveBtns {
+      display: flex;
+      gap: 10px;
+
+      span {
+        margin: 0px !important;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px !important;
+    background: var(--bg-b) !important;
+    height: 5px !important;
+    border-radius: 8px !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-f) !important;
+    border-radius: 8px !important;
+    height: 4px !important;
+  }
+
+  ::-webkit-scrollbar:vertical {
+    width: 5px !important;
+    background: var(--bg-a) !important;
+    height: 5px !important;
+    border-radius: 8px !important;
+    display: block !important;
+  }
+}

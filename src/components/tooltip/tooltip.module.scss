@@ -1,0 +1,56 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.button {
+  cursor: pointer;
+  padding: 3px;
+  background: var(--bg-j);
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &:hover {
+    background: var(--bg-b);
+  }
+
+  .tooltip {
+    position: absolute;
+    bottom: 70%; // Adjust space above the tooltip bubble
+    left: 4%;
+    background-color: var(--bg-d);
+    color: var(--font-b);
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      visibility 0.2s,
+      opacity 0.2s,
+      transform 0.2s;
+  }
+
+  // Show tooltip on hover
+  &:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+.content_container {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+.display_flex {
+  display: flex !important;
+}
+.content_style {
+  width: 100% !important;
+
+  display: inline-block !important;
+}

@@ -1,0 +1,205 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.resizableTable {
+  width: 100%;
+  border-collapse: collapse;
+
+  // table-layout: fixed;
+
+  th {
+    font-weight: 600;
+    @include font13;
+    color: var(--font-a);
+    text-align: left;
+
+    background-color: var(--bg-j);
+    position: relative;
+    overflow: hidden;
+    padding: 0px 5px;
+    cursor: default;
+
+    .resizeHandle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto;
+      bottom: 0;
+      width: 10px;
+      cursor: ew-resize;
+      background-color: var(--bg-j);
+      transition: background-color 0.3s;
+    }
+  }
+
+  td {
+    border: 1px solid var(--stroke-d);
+    text-align: left;
+    overflow: hidden;
+    padding: 2px 5px;
+    cursor: pointer;
+
+    .resizeHandle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto;
+      bottom: 0;
+      width: 10px;
+      cursor: ew-resize;
+      transition: background-color 0.3s;
+    }
+  }
+}
+
+.dataHeader {
+  overflow: hidden;
+  color: var(--font-a);
+  @include font13;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.dataText {
+  max-width: 30px;
+  color: var(--font-a);
+  white-space: nowrap !important;
+  /* Ensure no wrapping */
+  text-overflow: ellipsis Im !important;
+  /* Apply ellipsis for overflow */
+  @include font13;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.mainWrapper {
+  // border: 1px solid red;
+  // height: 300px;
+  position: relative;
+  flex-flow: column;
+  overflow-y: scroll !important;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.info_parent_container {
+  position: relative !important;
+  background: var(--red) !important;
+  border: 1px solid var(--red) !important;
+  height: 100%;
+}
+
+.generalInfo {
+  right: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-b);
+  // border: 1px solid black;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  padding-bottom: 75vh !important;
+
+  // &::-webkit-scrollbar {
+  //   width: 5px !important;
+  //   /* Remove scrollbar space */
+  //   background: var(--stroke-a);
+  //   /* Optional: just make scrollbar invisible */
+  //   height: 6px !important;
+  //   border-radius: 0px;
+  //   padding: 3px !important;
+  // }
+
+  // /* Optional: show position indicator in red */
+  // &::-webkit-scrollbar-thumb {
+  //   background: var(--bg-b);
+  //   border-radius: 0px;
+  //   display: block !important;
+  // }
+
+  // &::-webkit-scrollbar:vertical {
+  //   top: 80px;
+  //   width: 5px !important;
+  //   /* Remove scrollbar space */
+  //   background: red;
+  //   /* Optional: just make scrollbar invisible */
+  //   height: 5px;
+  //   display: block !important;
+  //   border-radius: 8px;
+  // }
+
+  .tabsSection {
+    padding: 0px;
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      background-color: var(--bg-b);
+      padding: 4px !important;
+      border-bottom: 1px solid var(--stroke-a);
+    }
+
+    .customTabs {
+      // padding: 5px !important;
+      background-color: var(--table-row);
+      color: var(--font-a);
+      text-align: center;
+      text-overflow: ellipsis;
+      /* Desktop/Headings/Heading 4 */
+
+      @include font15;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    .customActive {
+      border-bottom: 2px solid var(--light-red) !important;
+      color: var(--light-red) !important;
+    }
+  }
+}
+
+.tableContainer {
+  // max-height: 300px;
+  overflow-y: auto;
+}
+
+.tableContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.resizableTable thead {
+  position: sticky;
+  top: -3px;
+  background-color: var(--bg-b);
+  z-index: 1;
+}
+.table_head {
+  width: 100% !important;
+}
+.padding_five {
+  padding: 5px !important;
+}
+.right_panel {
+  box-shadow: -8px 0px 20px 0px var(--bg-shadow) !important;
+  z-index: 1 !important;
+}
+.border_style {
+  border: 0.5px solid var(--border-with-no-light-mode) !important;
+}
+
+.rowHoverClass {
+  background-color: var(--bg-b) !important;
+}

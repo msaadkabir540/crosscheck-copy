@@ -1,0 +1,64 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  z-index: 999;
+}
+
+.title {
+  display: flex;
+  padding: 5px 5px;
+  align-items: flex-start;
+  gap: 5px;
+  align-self: stretch;
+  cursor: pointer;
+  border-bottom: 0.5px solid var(--font-a);
+
+  span {
+    overflow: hidden;
+    color: var(--font-a);
+    text-overflow: ellipsis;
+
+    @include font13;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+.child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 5px;
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 5px;
+    padding: 0px 10px;
+
+    .left {
+      color: var(--font-a);
+      @include font13;
+      font-family: ' Public Sans', sans-serif;
+      font-weight: 400;
+    }
+
+    .right {
+      color: var(--font-a);
+      @include font13;
+      font-family: ' Public Sans', sans-serif;
+      font-weight: 400;
+      word-break: break-all;
+    }
+  }
+}
+.textSm {
+  @include font13;
+  color: var(--font-a);
+  font-family: ' Public Sans', sans-serif;
+  font-weight: 300;
+}

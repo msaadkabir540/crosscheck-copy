@@ -1,0 +1,96 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  @media (max-width: 550px) {
+    margin-top: 0px;
+  }
+  .tabDiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    p {
+      font-weight: 400;
+      @include font15;
+      color: var(--placeholder);
+    }
+    .p {
+      color: var(--text-color3) !important;
+      font-weight: 600 !important;
+    }
+  }
+  .gridCard {
+    @include gridFour(20, 20);
+    margin-top: 20px;
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: $md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 550px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+    .card {
+      background: var(--table-row);
+      border-radius: 12px;
+      padding: 30px 35px;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 550px) {
+        padding: 16px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      }
+      justify-content: space-between;
+      .img {
+        display: flex;
+        justify-content: center;
+        @media (max-width: 550px) {
+          display: block;
+          svg {
+            width: 18.993px;
+            height: 19px;
+          }
+        }
+      }
+      h6 {
+        font-style: normal;
+        font-weight: 700;
+        @include font26;
+        text-align: center;
+        color: var(--text-color3);
+        margin-top: 20px;
+        @media (max-width: 550px) {
+          margin-top: 0px;
+          @include font18;
+        }
+      }
+      p {
+        font-weight: 400;
+        @include font15;
+        margin-top: 15px;
+        text-align: center;
+        @media (max-width: 550px) {
+          display: none;
+        }
+        color: var(--text-color1);
+      }
+      .imgDiv {
+        @media (max-width: 550px) {
+          display: none;
+        }
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+      }
+    }
+  }
+}

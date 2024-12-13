@@ -1,0 +1,51 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 100%;
+
+  //   border: solid red 1px
+  .tabs {
+    width: 20%;
+    // background-color: aqua;
+    overflow-y: auto;
+    border-right: solid 1px var(--stroke-a);
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 60vh;
+
+    .tab {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+
+      p {
+        @include font13;
+        font-weight: 500;
+      }
+    }
+
+    .tabActive {
+      background-color: var(--bg-b);
+      border-radius: 5px;
+    }
+  }
+
+  .tabsContent {
+    width: 80%;
+    padding: 10px;
+    height: auto;
+    overflow-y: auto;
+    max-height: 60vh;
+    @include gridTwo; // border
+    gap: 10px;
+  }
+}

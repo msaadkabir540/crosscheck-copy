@@ -1,0 +1,131 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.captureNav_RightChild {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    margin-right: 10px;
+  }
+}
+
+.copy_url_button {
+  display: flex;
+  height: 35px;
+  min-width: 100px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  // gap: 10px;
+  border: 1px solid var(--stroke-b);
+  background-color: var(--bg-j) !important;
+  border-radius: 5px;
+  span {
+    color: var(--font-c) !important;
+  }
+  &:hover {
+    background-color: var(--bg-d) !important;
+    color: var(--font-b) !important;
+
+    span {
+      color: var(--bg-a) !important;
+    }
+  }
+}
+.strokeBtn {
+  display: flex;
+  height: 35px;
+  min-width: 100px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid var(--stroke-f) !important;
+  background-color: var(--bg-j) !important;
+
+  span {
+    color: var(--font-d) !important;
+  }
+}
+
+.strokeBtnTwo {
+  display: flex;
+  height: 35px;
+  min-width: 100px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid var(--stroke-f) !important;
+  background-color: var(--bg-e) !important;
+
+  span {
+    color: var(--font-b) !important;
+  }
+}
+
+.moreMenu {
+  position: relative;
+}
+
+.modalDiv {
+  z-index: 5;
+  top: 32px;
+  right: 10px;
+  position: absolute;
+  background-color: var(--bg-a);
+  border: 1px solid var(--stroke-a);
+  border-radius: 5px;
+  width: max-content;
+  box-shadow: 0px 4px 4px 0px var(--bg-shadow);
+}
+.iconClass {
+  path {
+    stroke: var(--stroke-d) !important;
+  }
+}
+
+.flexImport {
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  @include font13;
+
+  svg {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  background-color: var(--bg-j);
+}
+
+.public_mode_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.delete_button {
+  color: var(--red);
+}
+.text_color {
+  color: var(--font-a) !important;
+}
+.icon_color {
+  svg {
+    path {
+      stroke: var(--stroke-d) !important;
+    }
+  }
+}

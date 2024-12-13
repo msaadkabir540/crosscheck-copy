@@ -1,0 +1,89 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.mainWrapper {
+  margin-top: 10px;
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  @media (max-width: $lg) {
+    flex-direction: column;
+  }
+
+  .flexWrapperLeft {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    gap: 10px;
+    @media (max-width: $lg) {
+      width: 100%;
+    }
+
+    .upper {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .testSummary {
+      overflow: auto;
+    }
+  }
+  .flexWrapperRight {
+    width: 35%;
+    @media (max-width: $lg) {
+      width: 100%;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.mainWrapper2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-gap: 10px 10px;
+  grid-auto-rows: auto;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+.bottomWrapper {
+  margin-top: 15px;
+  @include gridThree(10, 10);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+.btnClassUncheckModal {
+  background-color: var(--bg-j);
+  border: 1px solid var(--stroke-b);
+
+  span {
+    color: var(--font-c) !important;
+  }
+}
+
+.refreshBtn {
+  background-color: var(--bg-a);
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  .chipsDiv {
+    display: flex;
+    right: 0;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,67 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  padding-top: 95px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../../assets/Banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  @media (max-width: 1440px) {
+    height: 75vh;
+  }
+
+  @media (max-width: $sm) {
+    justify-content: flex-start;
+    padding-top: 20px;
+    background-size: cover;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .icon {
+    padding-bottom: 60px;
+  }
+
+  h2 {
+    color: var(--font-b);
+    text-align: center;
+    @include font60;
+    font-weight: 600;
+    padding-bottom: 60px;
+  }
+
+  p {
+    color: var(--font-b);
+
+    font-family: 'Public Sans', sans-serif;
+    @include font24;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+  }
+
+  button {
+    border: 1px solid var(--bg-j);
+    max-width: 150px;
+    margin-top: 30px;
+    height: 41px;
+    padding: 10px;
+    background-color: var(--stroke-f);
+
+    @media (max-width: $sm) {
+      height: 35px;
+    }
+
+    span {
+      color: var(--bg-a) !important;
+      font-size: calc(14px + (18 - 14) * (100vw - 320px) / (1440 - 320)) !important;
+    }
+  }
+}

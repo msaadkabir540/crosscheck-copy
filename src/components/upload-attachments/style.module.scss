@@ -1,0 +1,54 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.inputContainer {
+  label {
+    font-weight: 500;
+    @include font13;
+    line-height: 32px;
+    color: var(--font-a);
+    text-transform: capitalize;
+    margin-left: 7px;
+    margin-bottom: 5px;
+  }
+
+  .controller {
+    display: flex;
+    gap: 10px;
+
+    .container {
+      width: 100%;
+    }
+
+    input[type='range'] {
+      padding: 0 !important;
+    }
+  }
+}
+
+.imgDiv {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  svg {
+    height: 24px;
+    width: 24px;
+    path {
+      stroke: var(--stroke-d);
+    }
+  }
+}
+
+.errorMessage {
+  display: block;
+  @include font13;
+  margin-left: 5px;
+  color: var(--light-red);
+}
+
+.pointerClass {
+  cursor: pointer;
+  width: 22px;
+}

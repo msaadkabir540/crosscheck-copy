@@ -1,0 +1,133 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.grid {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+}
+
+.searchDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+
+  input {
+    padding-left: 35px;
+  }
+}
+
+.btn {
+  max-width: 97px !important;
+  padding: 0px;
+  height: 35px;
+
+  span {
+    @include font13;
+  }
+}
+
+.modalDiv {
+  @media (max-width: 490px) {
+    display: none;
+  }
+
+  display: block;
+}
+
+.modalDivMobile {
+  @media (max-width: 490px) {
+    display: block;
+  }
+
+  display: none;
+}
+
+.membersRow {
+  display: flex;
+  padding: 10px 0px;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-bottom: 1px solid var(--stroke-a);
+  .memberInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .imgDiv {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: -10px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+    span {
+      margin-right: -10px;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--stroke-b);
+      color: var(--font-b);
+      border-radius: 50%;
+      @include font11;
+      font-weight: 400;
+      border: 1px solid var(--bg-a);
+    }
+
+    p {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--stroke-b);
+      color: var(--font-b);
+
+      border-radius: 50%;
+      @include font11;
+      font-weight: 400;
+      border: 1px solid var(--bg-a);
+    }
+  }
+
+  .name {
+    width: 150px;
+  }
+}
+
+.btnRemove {
+  background: var(--font-e);
+  display: flex;
+  padding: 1px 3px;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+}
+
+.addModal {
+  @media (max-width: 760px) {
+    display: none;
+  }
+}
+
+.addModalMobile {
+  display: none;
+
+  @media (max-width: 760px) {
+    display: block;
+  }
+}
+
+.startIcon {
+  left: 13px;
+}

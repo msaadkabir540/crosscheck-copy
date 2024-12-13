@@ -1,0 +1,13 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.suggested_name {
+  color: var(--font-a);
+  padding: 5px 10px !important;
+
+  &:hover {
+    background-color: var(--stroke-a);
+    cursor: pointer;
+  }
+}

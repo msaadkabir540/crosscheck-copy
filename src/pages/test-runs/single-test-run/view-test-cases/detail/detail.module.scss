@@ -1,0 +1,39 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  margin-top: 21px;
+
+  .headings {
+    margin-bottom: 12px;
+  }
+
+  span {
+    color: var(--stroke-b);
+    /* Heading 4 */
+
+    @include font13;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .content {
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: var(--font-a);
+    /* Body Font */
+
+    @include font13;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    a {
+      color: var(--font-a) !important;
+    }
+  }
+}

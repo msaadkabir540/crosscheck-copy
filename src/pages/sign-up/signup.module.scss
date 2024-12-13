@@ -1,0 +1,410 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 27px;
+  background-image: url(../../assets/login-bg.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $tab) {
+    padding: 20px 20px 47px 20px;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  @media (max-width: $tab) {
+    background-image: none;
+  }
+
+  .flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 140px;
+    max-width: 1423px;
+    margin: 0px auto;
+    padding: 77px 130px 0px 130px;
+
+    @media (max-width: $tab) {
+      gap: 30px;
+      align-items: center;
+      padding: 0px;
+      margin: 0px auto;
+      flex-direction: column;
+    }
+    .logo {
+      max-width: 321px;
+      width: 100%;
+      height: 100px;
+      @media (max-width: $tab) {
+        max-width: 195px;
+        height: 60px;
+      }
+    }
+    .flexLeft {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      height: 100%;
+      gap: 100px;
+
+      h1 {
+        @include font60;
+        font-weight: 600;
+        color: var(--font-a);
+        margin: 0px !important;
+      }
+      p {
+        font-weight: 200;
+        @include font18;
+        color: var(--font-a);
+        font-feature-settings:
+          'clig' off,
+          'liga' off;
+        margin-top: 10px;
+        @media (max-width: $tab) {
+          margin-top: 8px;
+        }
+      }
+
+      @media (max-width: $tab) {
+        gap: 30px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .card {
+    border-radius: 20px;
+    background: var(--cstm-bg-a);
+    box-shadow: 0px 0px 60px 0px var(--bg-shadow);
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 30px;
+
+    @media (max-width: $tab) {
+      max-width: 335px;
+      padding: 40px 20px;
+      border-radius: 16px;
+    }
+
+    label {
+      color: var(--font-b);
+      @include font15;
+      line-height: normal;
+    }
+    .inner {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      margin-top: 40px;
+      padding-bottom: 28px;
+
+      @media (max-width: $md) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .moreInner {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 5px;
+        cursor: pointer;
+
+        span {
+          @include font15;
+          font-weight: 500;
+          color: var(--font-a);
+        }
+
+        img {
+          height: 24px;
+          width: 24px;
+
+          @media (max-width: $tab) {
+            height: 16px;
+            width: 16px;
+          }
+        }
+
+        transform: scale(1);
+
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 0.2s ease-in-out;
+          /* Adjust the duration and easing as needed */
+        }
+      }
+
+      .selected {
+        border-bottom: 2px solid;
+        border-image-slice: 1;
+        border-image-source: var(--bg-e);
+      }
+    }
+
+    .selected {
+      border-bottom: 2px solid;
+      border-image-slice: 1;
+      border-image-source: var(--bg-e);
+    }
+  }
+
+  input {
+    max-width: 100% !important;
+    background-color: var(--cstm-bg-c);
+    color: var(--font-b) !important;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid var(--bg-j);
+    &:focus {
+      border: 1px solid var(--bg-j) !important;
+      background-color: var(--cstm-bg-c) !important;
+    }
+    &:active {
+      border: 1px solid var(--bg-j) !important;
+      background-color: var(--cstm-bg-c) !important;
+    }
+
+    &::placeholder {
+      @include font15;
+      color: var(--font-e);
+      font-weight: 200;
+    }
+  }
+
+  h2 {
+    font-weight: 700;
+    @include font40;
+    text-align: center;
+    color: var(--bg-i);
+  }
+
+  .label {
+    margin-top: 15px;
+
+    @media (max-width: $tab) {
+      margin-top: 12px;
+    }
+  }
+
+  .checkbox {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $tab) {
+      margin-top: 12px;
+      align-items: flex-start;
+    }
+
+    h6 {
+      @include font13;
+      font-weight: 300;
+      color: var(--font-b);
+      span {
+        color: var(--bg-e);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .checkboxClass {
+    font-size: calc(13px + (13 - 13) * (100vw - 375px) / (1440 - 375)) !important;
+    font-weight: 300;
+    padding-left: 24px;
+    color: var(--font-b);
+
+    span {
+      border: 1px solid var(--stroke-c);
+      height: 14px;
+      width: 14px;
+      border-radius: 3px;
+      margin-top: 0px;
+    }
+    span::after {
+      border-width: 0 1px 1px 0 !important;
+      left: 4px !important;
+      top: 1px !important;
+    }
+  }
+  .checkboxClass input:checked ~ span {
+    background-color: var(--cstm-bg-c) !important;
+  }
+  .loginBtn {
+    max-width: 100% !important;
+    border-radius: 5px;
+    background: var(--bg-e) !important;
+    height: 41px !important;
+    margin-top: 30px;
+
+    @media (max-width: $tab) {
+      height: 35px !important;
+      padding: 8px !important;
+    }
+    span {
+      @include font18;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  .divider {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    margin-top: 10px;
+
+    @media (max-width: $tab) {
+      margin-top: 8px;
+    }
+
+    .leftLine {
+      width: 198.5px;
+      height: 1px;
+      background: var(--stroke-a);
+    }
+
+    .text {
+      color: var(--font-b);
+      text-align: center;
+      @include font13;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    .rightLine {
+      width: 198.5px;
+      height: 1px;
+      background: var(--stroke-a);
+    }
+  }
+
+  .googleSignUp {
+    max-width: 100% !important;
+    background: var(--bg-j) !important;
+    border-radius: 5px !important;
+    height: 41px !important;
+    margin: 10px 0px 30px 0px;
+
+    @media (max-width: $tab) {
+      @include font13;
+      height: 41px !important;
+      padding: 8px !important;
+      margin: 8px 0px 20px 0px;
+    }
+    img {
+      height: 16px !important ;
+      width: 16px !important;
+    }
+
+    span {
+      font-size: calc(16px + (18 - 16) * (100vw - 375px) / (1440 - 375)) !important;
+      color: var(--font-b) !important;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}
+
+.smallBtn {
+  display: none;
+
+  @media (max-width: $tab) {
+    display: block;
+  }
+}
+
+.btn {
+  background-color: var(--bg-j) !important;
+  border: 1px solid var(--light-red) !important;
+  max-width: 100%;
+  padding: 10px;
+
+  @media (max-width: $tab) {
+    height: 29px !important;
+    padding: 8px !important;
+    margin-top: 10px;
+  }
+
+  span {
+    background: var(--bg-e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: calc(14px + (18 - 14) * (100vw - 320px) / (1440 - 320)) !important;
+
+    @media (max-width: $tab) {
+      font-size: calc(11px + (14 - 11) * (100vw - 320px) / (1440 - 320)) !important;
+    }
+  }
+}
+
+.errorMessageWrapper {
+  padding: 10px;
+  margin: 14px 0;
+  display: flex;
+  gap: 10px;
+
+  .iconClass {
+    svg {
+      width: 14px !important;
+      height: 14px !important;
+
+      path {
+        fill: var(--red) !important;
+      }
+    }
+  }
+
+  p {
+    @include font13;
+    font-weight: 300;
+    color: var(--red);
+  }
+}
+.signupDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    text-align: center;
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+    font-style: normal;
+    line-height: normal;
+    color: var(--font-b) !important;
+    @include font18;
+    font-weight: 400 !important;
+    a {
+      text-decoration: underline;
+      color: var(--font-b);
+    }
+    span {
+      font-weight: 700 !important;
+    }
+  }
+}
+
+.clickable_link {
+  cursor: pointer !important;
+}
